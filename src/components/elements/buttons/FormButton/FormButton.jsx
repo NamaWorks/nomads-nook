@@ -7,17 +7,21 @@ const FormButton = ({checkerFnc, setPopupTexts, setButtonHovered, btnClass, link
   const formsElements = useContext(FormContext)
   const [active, setActive] = useState(true)
   const { checkoutInformation } = formsElements;
+  const { paymentInformation } = formsElements;
+  const { cardInformation } = formsElements;
 
   useEffect(()=>{
     if(checkerFnc){
       checkerFnc(toCheck).activate == false && setActive(false)
       checkerFnc(toCheck).activate == true && setActive(true)
+
+      console.log(checkerFnc(toCheck))
     }
     if(setPopupTexts){
       setPopupTexts(checkerFnc(toCheck).infoToDisplay)
     }
 
-  },[checkoutInformation])
+  },[checkoutInformation, paymentInformation, cardInformation ])
 
   return (
     <>

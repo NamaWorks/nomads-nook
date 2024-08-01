@@ -1,4 +1,5 @@
 import { FormContext } from '../../../../App.jsx'
+import { paymentFormChecker } from '../../../../utils/functions/paymentFormChecker.js'
 import FormButton from '../../buttons/FormButton/FormButton.jsx'
 import FormInput from '../FormInput/FormInput.jsx'
 import CardInformation from './CardInformation/CardInformation.jsx'
@@ -14,6 +15,7 @@ const formsElements = useContext(FormContext)
 const {licenseInfo} = formsElements
 const {paymentInformation} = formsElements
 const {setPaymentInformation} = formsElements
+const {cardInformation} = formsElements
 
   
 
@@ -36,7 +38,8 @@ const {setPaymentInformation} = formsElements
           <FormButton 
             btnClass="payment-btn"
             color="blue"
-            // checkerFnc={()=>{console.log("button hovered")}}
+            checkerFnc={paymentFormChecker}
+            toCheck={{paymentInformation, cardInformation, licenseInfo}}
             // link="/"
             // popupTexts={popupTexts} setPopupTexts={setPopupTexts} 
             text="pay"
