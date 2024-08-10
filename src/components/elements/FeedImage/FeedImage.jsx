@@ -19,7 +19,7 @@ const FeedImage = ({ url, i}) => {
       />
 
       {imgHover && <RateButton />}
-      <AddToCartButton />
+      {imgHover && <AddToCartButton />}
     </div>
   )
 }
