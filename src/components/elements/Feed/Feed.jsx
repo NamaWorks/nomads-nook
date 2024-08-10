@@ -13,6 +13,7 @@ const Feed = () => {
             url={url}
             i={i}
             key={i}
+            
           />)
         })}
       </div>

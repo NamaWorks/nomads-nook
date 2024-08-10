@@ -1,0 +1,10 @@
+.rate-btn {
+  z-index: 99;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: var(--nn-margin-btn-100);
+  text-transform: uppercase;
+  background: none;
+  color: var(--nn-white);
+}

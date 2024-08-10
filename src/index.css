@@ -19,6 +19,7 @@
   --nn-main-font-family: "PP Rader"; 
 
   /* COLORS */
+  --nn-white: #ffffff;
   --nn-darkgrey: #323232;
   --nn-cream-100: #F5F3F2;
   --nn-cream-200: #F1EFED;
@@ -35,9 +36,16 @@
   --nn-gap-100: 1rem;
   --nn-padding-000: 4px;
   --nn-padding-100: 1rem;
+  --nn-margin-btn-100: 0.5rem;
 
   /* DETAILS */
   --nn-border-radius-100: 1rem;
+
+  /* ANIMATIONS */
+  --nn-animations-time-100: 0.25s;
+  --nn-animations-fast-enter: cubic-bezier(0,.69,.3,.98);
+  --nn-animations-smooth-enter: cubic-bezier(.17,.01,.3,.98);
+
 
 }
 
