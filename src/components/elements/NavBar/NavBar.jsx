@@ -1,3 +1,4 @@
+import { Link, NavLink } from 'react-router-dom'
 import './NavBar.css'
 
 import React from 'react'
@@ -13,9 +14,15 @@ const NavBar = () => {
           <h1 className='nn-logo'>NN</h1>
         </div>
         <ul className='nav-ul'>
-          <li className="nav-ul-items">gallery</li>
-          <li className="nav-ul-items">about</li>
-          <li className="nav-ul-items">cart</li>
+          <li className="nav-ul-items">
+            <NavLink to="/" activeClassName="active">Gallery</NavLink>
+          </li>
+          <li className="nav-ul-items">
+            <NavLink to="about" activeClassName="active">About</NavLink>
+          </li>
+          <li className="nav-ul-items">
+            <NavLink to="cart" activeClassName="active">Cart</NavLink>
+          </li>
         </ul>
       </nav>
 
@@ -24,5 +31,4 @@ const NavBar = () => {
 
   )
 }
-
 export default NavBar

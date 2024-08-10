@@ -30,5 +30,13 @@ nav ul li {
   list-style: none;
   font-family: var(--nn-main-font-family);
   text-transform: uppercase;
+}
+
+nav ul li a {
+  text-decoration: none;
   color: var(--nn-darkgrey);
+}
+
+.active {
+  color: var(--nn-accent-coral);
 }
