@@ -31,7 +31,17 @@
 
   /* SPACES */
   --nn-nav-gap: 2rem;
+  --nn-gap-000: 4px;
+  --nn-gap-100: 1rem;
+  --nn-padding-000: 4px;
+  --nn-padding-100: 1rem;
 
+  /* DETAILS */
+  --nn-border-radius-100: 1rem;
+
+}
+
+body {
 }
 
 
