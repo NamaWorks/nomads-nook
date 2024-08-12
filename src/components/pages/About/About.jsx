@@ -6,7 +6,21 @@ import React from 'react'
 const About = () => {
   return (
     <>
-    <div>About</div>
+    <NavBar/>
+
+<main className='about-page'>
+
+    <section className="about-section">
+
+    </section>
+
+    <section className="about-section carousel">
+    
+    </section>
+
+    
+</main>
+
     </>
   )
 }

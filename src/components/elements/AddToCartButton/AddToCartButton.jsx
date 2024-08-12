@@ -8,7 +8,7 @@ const AddToCartButton = () => {
       <div className='btn-content'>
         <p>add to cart</p>
         <div className='arrow'>
-          <img src="/public/assets/svg/arrow.svg" alt="" />
+          <img src="assets/svg/arrow.svg" alt="" />
         </div>
       </div>
     </button>

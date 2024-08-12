@@ -4,7 +4,10 @@ import React from 'react'
 
 const Cart = () => {
   return (
+    <>
+    <NavBar />
     <div>Cart</div>
+    </>
   )
 }
 
