@@ -1,0 +1,9 @@
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  width: 20svw;
+}
+
+.carousel-img-container img {
+  width: 100%;
+}

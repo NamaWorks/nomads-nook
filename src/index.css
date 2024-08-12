@@ -3,6 +3,8 @@
   src: url('./assets/fonts/rader_font/PPRader-Regular.otf') format('opentype');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap');
+
 /* reset CSS */
 
 *{
@@ -17,13 +19,15 @@
 :root {
   /* FONTS */
   --nn-main-font-family: "PP Rader"; 
+  --nn-secondary-font-family: "Lekton", monospace; 
 
   /* COLORS */
   --nn-white: #ffffff;
   --nn-darkgrey: #323232;
-  --nn-cream-100: #F5F3F2;
+  --nn-cream-100: #f2f0ee85;
   --nn-cream-200: #F1EFED;
   --nn-cream-300: #E8E4E1;
+  --nn-cream-op-100: 0.52;
 
   /* ACCENT */
   --nn-accent-coral: #FFA471;
@@ -37,6 +41,7 @@
   --nn-padding-000: 4px;
   --nn-padding-100: 1rem;
   --nn-margin-btn-100: 0.5rem;
+  --nn-margin-list-100: 1rem;
 
   /* DETAILS */
   --nn-border-radius-100: 1rem;

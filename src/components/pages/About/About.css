@@ -1,0 +1,35 @@
+nav{
+  padding: var(--nn-padding-100);
+}
+
+.about-page {
+  display: flex;
+  background-color: var(--nn-cream-100);
+}
+
+.services {
+  padding: var(--nn-padding-100);
+}
+
+.about-list {
+  font-family: var(--nn-main-font-family);
+  margin-left: var(--nn-margin-list-100);
+}
+
+.about-pricing {
+  background-color: var(--nn-white);
+  padding: var(--nn-padding-100);
+}
+
+.about-pricing ul {
+  list-style: none;
+}
+
+.about-pricing ul li {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+
