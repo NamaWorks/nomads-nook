@@ -5,31 +5,70 @@ nav{
 .about-page {
   display: flex;
   background-color: var(--nn-cream-100);
+  margin: var(--nn-margin-main-100);
+  border-radius: var(--nn-border-radius-100);
+  overflow: hidden;
+}
+
+.about-section p, .about-section li {
+  font-family: var(--nn-secondary-font-family);
+  text-transform: uppercase;
+}
+
+
+.about-info {
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .services {
   padding: var(--nn-padding-100);
+  display: flex;
+  flex-direction: column;
+  gap: var(--nn-gap-100);
+}
+
+.prev-list {
+  margin-bottom: calc(-1*var(--nn-margin-main-100));
 }
 
 .about-list {
-  font-family: var(--nn-main-font-family);
-  margin-left: var(--nn-margin-list-100);
+  margin-left: var(--nn-margin-list-200);
+  display: flex;
+  flex-direction: column;
+  gap: var(--nn-gap-000);
+  
 }
 
 .about-pricing {
   background-color: var(--nn-white);
   padding: var(--nn-padding-100);
+  /* border-radius: 0 var(--nn-border-radius-100) 0 0; */
 }
 
 .about-pricing ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--nn-gap-000);
 }
 
 .about-pricing ul li {
   display: flex;
-  flex-direction: row;
+  align-items: flex-end;
 }
 
+.pricing-item p {
+  text-wrap: nowrap;
+}
 
+.pricing-item .price {
+  text-align: end;
+}
 
-
+.lower-dash-container {
+  width: 100%;
+  border-bottom: 1px dashed var(--nn-darkgrey);
+}

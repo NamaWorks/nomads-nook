@@ -1,26 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap');
 @font-face {
   font-family: "PP Rader";
   src: url('./assets/fonts/rader_font/PPRader-Regular.otf') format('opentype');
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap');
-
 /* reset CSS */
-
 *{
 	margin: 0;
 	padding: 0;
 	border: 0;
   box-sizing: border-box;
 }
-
 /* END reset CSS */
-
 :root {
   /* FONTS */
   --nn-main-font-family: "PP Rader"; 
   --nn-secondary-font-family: "Lekton", monospace; 
-
   /* COLORS */
   --nn-white: #ffffff;
   --nn-darkgrey: #323232;
@@ -28,36 +22,28 @@
   --nn-cream-200: #F1EFED;
   --nn-cream-300: #E8E4E1;
   --nn-cream-op-100: 0.52;
-
   /* ACCENT */
   --nn-accent-coral: #FFA471;
   --nn-accent-blue: #B1CBCB;
   --nn-accent-green: #B4DD9B;
-
   /* SPACES */
   --nn-nav-gap: 2rem;
   --nn-gap-000: 4px;
   --nn-gap-100: 1rem;
   --nn-padding-000: 4px;
   --nn-padding-100: 1rem;
+  --nn-margin-main-100: 1rem;
   --nn-margin-btn-100: 0.5rem;
-  --nn-margin-list-100: 1rem;
-
+  --nn-margin-list-200: 1.5rem;
   /* DETAILS */
   --nn-border-radius-100: 1rem;
-
   /* ANIMATIONS */
   --nn-animations-time-100: 0.25s;
   --nn-animations-fast-enter: cubic-bezier(0,.69,.3,.98);
   --nn-animations-smooth-enter: cubic-bezier(.17,.01,.3,.98);
-
-
 }
-
-body {
-}
-
 
 h1, h2, h3, h4, p {
   font-family: var(--nn-main-font-family);
+  line-height: 1.3;
 }

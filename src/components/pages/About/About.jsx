@@ -12,7 +12,6 @@ const About = () => {
       <main className="about-page">
         <section className="about-section about-info">
           <div className="services">
-
             <p>
               Our photographers are carefully chosen for their unique ability to
               capture the essence of tranquility and mid-century aesthetics.
@@ -22,12 +21,11 @@ const About = () => {
               environment but also contributing to the art community.
             </p>
 
-            <p>
+            <p className='prev-list'>
               We’ve made it easy for you to find and purchase the perfect photos
               for your needs. Here’s how it works:
             </p>
             <ol className="about-list" type="1">
-
               <li>
                 Browse Our Collection: Explore our curated galleries and
                 discover a wide range of zen and mid-century inspired
@@ -49,21 +47,21 @@ const About = () => {
               </li>
             </ol>
           </div>
-          <div className='about-pricing'>
+          <div className="about-pricing">
             <ul>
               <li className="pricing-item">
                 <p>personal use license</p>
-                <div className='lower-dash-container'></div>
+                <div className="lower-dash-container"></div>
                 <p className="price">$29 per image</p>
               </li>
               <li className="pricing-item">
-              <p>commercial license</p>
-                <div className='lower-dash-container'></div>
+                <p>commercial license</p>
+                <div className="lower-dash-container"></div>
                 <p className="price">$99 per image</p>
               </li>
               <li className="pricing-item">
-              <p>extended license</p>
-                <div className='lower-dash-container'></div>
+                <p>extended license</p>
+                <div className="lower-dash-container"></div>
                 <p className="price">$199 per image</p>
               </li>
             </ul>
