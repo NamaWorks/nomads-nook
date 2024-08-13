@@ -1,0 +1,10 @@
+.cart-page {
+  padding: var(--nn-padding-100);
+}
+
+.hero-cart {
+  width: 100%;
+  height: 30svh;
+  overflow:hidden;
+  border-radius: var(--nn-border-radius-100);
+}

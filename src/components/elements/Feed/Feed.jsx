@@ -1,9 +1,16 @@
 import { feedImagesUrls } from '../../../data/constantVariables'
 import FeedImage from '../FeedImage/FeedImage';
 import './Feed.css'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { fullWidth, lineOfFour, groupOfThree } from '../../../utils/functions/gridRandomizer.js'
 
 const Feed = () => {
+useEffect(() => {
+  lineOfFour()
+  groupOfThree()
+  fullWidth()
+}, [])
+
   return (
     <>
       <div className="images-feed">
