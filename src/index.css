@@ -39,6 +39,7 @@
   --nn-border-radius-100: 1rem;
   /* ANIMATIONS */
   --nn-animations-time-100: 0.25s;
+  --nn-animations-time-200: 0.75s;
   --nn-animations-fast-enter: cubic-bezier(0,.69,.3,.98);
   --nn-animations-smooth-enter: cubic-bezier(.17,.01,.3,.98);
 }

@@ -1,14 +1,20 @@
 import { Link, NavLink } from 'react-router-dom'
 import './NavBar.css'
 import { useEffect } from 'react'
+import { useNavScroll } from '../../../utils/hooks/useNavScroll'
 
-const NavBar = () => {
+const NavBar = ({ titleSize, navPos, navGap, navHeight, navTop, titleBottom }) => {
   return (
-
     <>
-    <nav>
+    <nav
+    style={{position:navPos, gap:`${navGap}rem`, height:navHeight, top:navTop}}
+    >
         <div className='logo-container'>
-          <h1 className='nn-logo'>NN</h1>
+          <h1 
+          style={{fontSize:titleSize, bottom:titleBottom}}
+          className='nn-logo'
+          >NN
+          </h1>
         </div>
         <ul className='nav-ul'>
           <li className="nav-ul-items">

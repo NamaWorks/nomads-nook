@@ -1,3 +1,4 @@
+import { useNavScroll } from '../../../utils/hooks/useNavScroll';
 import NavBar from '../../elements/NavBar/NavBar'
 import VerticalCarousel from '../../elements/VerticalCarousel/VerticalCarousel';
 import './About.css'
@@ -5,9 +6,19 @@ import './About.css'
 import React from 'react'
 
 const About = () => {
+  const { titleSize, navPos, navGap, navHeight, navTop, titleBottom } = useNavScroll(false)
   return (
     <>
-      <NavBar />
+      <NavBar
+
+        titleSize={titleSize}
+        navPos={navPos}
+        navGap={navGap}
+        navHeight={navHeight}
+        navTop={navTop}
+        titleBottom={titleBottom}
+
+       />
 
       <main className="about-page">
         <section className="about-section about-info">

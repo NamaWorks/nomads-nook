@@ -8,16 +8,24 @@ h1  {
   font-family: var(--nn-main-font-family);
   font-size: 220px;
   color: var(--nn-darkgrey);
-  /* line-height: 1; */
-  margin-bottom: -25.5%;
+  padding-left: var(--nn-padding-100);
+  position: relative;
+  bottom: -40px;
+  transition: var(--nn-animations-time-200) var(--nn-animations-smooth-enter);
 }
 
 nav {
   display: flex;
+  position: relative;
   gap: var(--nn-nav-gap);
-  align-items: flex-end;
-  /* flex: 3; */
-  /* overflow: hidden; */
+  align-items: flex-end;  
+  background-color: var(--nn-white);
+  width: 100svw;
+  overflow: hidden;
+  z-index: 999;
+  /* margin: 0 calc(-1*var(--nn-padding-100)); */
+  transition: var(--nn-animations-time-200) var(--nn-animations-smooth-enter);
+  padding: var(--nn-padding-100);
 }
 
 nav ul {

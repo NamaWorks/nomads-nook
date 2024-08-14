@@ -5,7 +5,7 @@
   background-color: var(--nn-white);
   padding-left: var(--nn-padding-000);
   width: 30svw;
-  height: 70svh;
+  height: 100%;
   overflow: scroll;
 }
 

@@ -1,5 +1,15 @@
+h1{
+  padding-left: var(--nn-padding-100);
+}
+
 nav{
   padding: var(--nn-padding-100);
+}
+
+main {
+  position: relative;
+  top: 65px;
+  height: calc(100svh - 100px);
 }
 
 .about-page {
