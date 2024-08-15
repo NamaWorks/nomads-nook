@@ -1,0 +1,49 @@
+.main-not-found-container{
+  background-color: var(--nn-cream-100);
+  display: flex;
+  height: 100svh;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found-msg-container{
+  width: 30svw;
+  min-width: 200px;
+  min-height: 200px;
+  border-radius: var(--nn-border-radius-100);
+  background-color: var(--nn-white);
+  padding: var(--nn-padding-100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: calc(2*var(--nn-gap-100));
+}
+
+.not-found-title-container {
+  background-color: var(--nn-cream-300);
+  padding: var(--nn-padding-100);
+  border-radius: calc(0.4*var(--nn-border-radius-100));
+  text-transform: uppercase;
+}
+
+.not-found-p {
+  text-transform: uppercase;
+  font-family: var(--nn-secondary-font-family);
+}
+
+.not-found-dotted-line {
+  border-bottom: 1px dashed var(--nn-darkgrey);
+}
+
+.not-found-back-home-btn {
+  background-color: var(--nn-accent-blue);
+  padding: calc(0.4*var(--nn-padding-100));
+  border-radius: calc(0.4*var(--nn-border-radius-100));
+  align-self: flex-end;
+}
+
+.not-found-back-home-btn a {
+  text-transform: uppercase;
+  color: var(--nn-darkgrey);
+  text-decoration: none;
+}
