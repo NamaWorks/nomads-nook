@@ -1,11 +1,67 @@
 import './RateButton.css'
-import React from 'react'
+import React, { useState } from 'react'
 
 const RateButton = () => {
+
+  const [clicked, setClicked] = useState(false)
+
   return (
-    <button className="rate-btn">
-      <p>rate picture</p>
+    <>
+    <button 
+    className="rate-btn"
+    onClick={()=>{
+      clicked ? setClicked(false) : setClicked(true)
+    }}
+    >
+      <p>rate picture</p>      
     </button>
+
+    {/* <ul className='ul-ratings'>
+          <li>
+            <button>sucks</button>
+          </li>
+          <li>
+            <button>bad</button>
+          </li>
+          <li>
+            <button>regular</button>
+          </li>
+          <li>
+            <button>that's okay</button>
+          </li>
+          <li>
+            <button>seems nice</button>
+          </li>
+          <li>
+            <button>love it!</button>
+          </li>
+        </ul> */}
+
+
+        {clicked && 
+        <ul className='ul-ratings'>
+          <li>
+            <button>sucks</button>
+          </li>
+          <li>
+            <button>bad</button>
+          </li>
+          <li>
+            <button>regular</button>
+          </li>
+          <li>
+            <button>that's okay</button>
+          </li>
+          <li>
+            <button>seems nice</button>
+          </li>
+          <li>
+            <button>love it!</button>
+          </li>
+        </ul>}
+
+
+    </>
   );
 };
 

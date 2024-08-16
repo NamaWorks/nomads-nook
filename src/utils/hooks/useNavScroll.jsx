@@ -14,10 +14,10 @@ const useNavScroll = (startFromBig=false,) => {
       useEffect(()=> {
         setNavPos("relative")
         setNavTop(0)
-        setTitleSize(220)
+        setTitleSize(300)
         setNavGap(2)
-        setNavHeight(220)
-        setTitleBottom(-40)
+        setNavHeight(300)
+        setTitleBottom(-63)
       },[])
       
   window.onscroll=()=>{
