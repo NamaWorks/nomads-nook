@@ -1,8 +1,10 @@
-import { feedImagesUrls } from '../../../data/constantVariables'
+import { feedImages } from '../../../data/constantVariables'
 import FeedImage from '../FeedImage/FeedImage';
 import './Feed.css'
-import React, { useEffect } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 import { fullWidth, lineOfFour, groupOfThree } from '../../../utils/functions/gridRandomizer.js'
+
+export const FeedContext = createContext()
 
 const Feed = () => {
 useEffect(() => {
@@ -11,18 +13,24 @@ useEffect(() => {
   fullWidth()
 }, [])
 
+const [imagesAddedToCart, setImagesAddedToCart] = useState([])
+
   return (
+    
     <>
+    <FeedContext.Provider value={{imagesAddedToCart, setImagesAddedToCart}}>
       <div className="images-feed">
-        {feedImagesUrls.map((url, i)=> {
+        {feedImages.map((img, i)=> {
           return(
           <FeedImage
-            url={url}
+            url={img.url}
+            id={img.id}
             i={i}
             key={i}
           />)
         })}
       </div>
+      </FeedContext.Provider>
     </>
   );
 }

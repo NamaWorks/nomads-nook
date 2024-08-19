@@ -10,7 +10,7 @@ h1  {
   color: var(--nn-darkgrey);
   padding-left: var(--nn-padding-100);
   position: relative;
-  bottom: -63px;
+  bottom: -105px;
   transition: var(--nn-animations-time-200) var(--nn-animations-smooth-enter);
 }
 
@@ -20,7 +20,7 @@ nav {
   gap: var(--nn-nav-gap);
   align-items: flex-end;  
   background-color: var(--nn-white);
-  width: 100svw;
+  width: 100%;
   overflow: hidden;
   z-index: 999;
   /* margin: 0 calc(-1*var(--nn-padding-100)); */

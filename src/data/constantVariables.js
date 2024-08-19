@@ -1,4 +1,4 @@
-export const feedImagesUrls = [
+const feedImagesUrls = [
   "https://res.cloudinary.com/dgrhbsilh/image/upload/v1723556892/21_RTC_P12_react-advanced/todd-quackenbush-JJB_K8aCPU4-unsplash_1_xcqcbe.jpg",
   "https://res.cloudinary.com/dgrhbsilh/image/upload/v1723556890/21_RTC_P12_react-advanced/tetiana-kobzeva-DuQn1ZTPfM0-unsplash_fqgoib.jpg",
   "https://res.cloudinary.com/dgrhbsilh/image/upload/v1723556889/21_RTC_P12_react-advanced/sander-traa-xz2NSArIK_E-unsplash_eohppr.jpg",
@@ -78,3 +78,10 @@ export const feedImagesUrls = [
   "https://res.cloudinary.com/dgrhbsilh/image/upload/v1723556845/21_RTC_P12_react-advanced/benjamin-dos-santos-phVaDpepOHE-unsplash_ewof2g.jpg",
   "https://res.cloudinary.com/dgrhbsilh/image/upload/v1723556845/21_RTC_P12_react-advanced/andrea-giardini-wcbUjun8aKY-unsplash_ujnmwr.jpg",
 ]
+
+export const feedImages = feedImagesUrls.map((url, i)=>{
+  return {
+    url: url,
+    id: `image-${i}`,
+  };
+})

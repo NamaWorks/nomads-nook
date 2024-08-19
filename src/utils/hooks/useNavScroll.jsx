@@ -17,7 +17,7 @@ const useNavScroll = (startFromBig=false,) => {
         setTitleSize(300)
         setNavGap(2)
         setNavHeight(300)
-        setTitleBottom(-63)
+        setTitleBottom(-105)
       },[])
       
   window.onscroll=()=>{

@@ -7,15 +7,14 @@ import AddToCartButton from '../AddToCartButton/AddToCartButton'
 
 const FeedImage = ({ url, i }) => {
   
-  
   const [imgHover, setImgHover] = useState(true)
-
 
   return (
     <div className="feed-image-container">
       <img 
         src={url} 
-        alt={`image-${i}`} 
+        alt={`image-id-${i}`}
+        id={`image-id-${i}`}
       />
 
       {imgHover && <RateButton />}

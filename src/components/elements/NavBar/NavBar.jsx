@@ -4,6 +4,10 @@ import { useEffect } from 'react'
 import { useNavScroll } from '../../../utils/hooks/useNavScroll'
 
 const NavBar = ({ titleSize, navPos, navGap, navHeight, navTop, titleBottom }) => {
+
+
+  const topPos = titleBottom + "%"
+
   return (
     <>
     <nav
@@ -12,6 +16,7 @@ const NavBar = ({ titleSize, navPos, navGap, navHeight, navTop, titleBottom }) =
         <div className='logo-container'>
           <h1 
           style={{fontSize:titleSize, bottom:titleBottom}}
+          // style={{fontSize:titleSize}}
           className='nn-logo'
           >NN
           </h1>

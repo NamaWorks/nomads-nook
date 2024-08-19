@@ -13,6 +13,7 @@
   border-radius: 5px;
   background: var(--nn-white);
   filter: drop-shadow(0px 0px 15px #00000028);
+  cursor: pointer;
 }
 
 .btn-content {
@@ -22,11 +23,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 15svw;
+  pointer-events: none;
 }
 
 .add-to-cart-btn p{
   position: relative;
   bottom: -2px;
+  pointer-events: none;
 }
 
 .arrow {
@@ -34,9 +37,6 @@
   position: relative;
   width: 10px;
   height: 10px;
+  pointer-events: none;
   /* overflow: hidden; */
 }
-
-
-
-
