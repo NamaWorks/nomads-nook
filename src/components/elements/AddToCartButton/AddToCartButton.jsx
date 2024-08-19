@@ -1,31 +1,26 @@
-import { FeedContext } from '../Feed/Feed.jsx'
-// import { FeedContext } from '../Feed/Feed'
+import { FeedContext } from '../../../App'
 import './AddToCartButton.css'
 
 import React, { useContext } from 'react'
 
+
+
 const AddToCartButton = () => {
 
-  const feedContext = useContext(FeedContext)
-
-const {setImagesAddedToCart} = feedContext
-const {imagesAddedToCart} = feedContext
-
+const {imagesAddedToCart, setImagesAddedToCart} = useContext(FeedContext)
   
   return (
-    <button
-      className='add-to-cart-btn'
-      onClick={
-        (e)=>{
-          const imageId = e.target.parentElement.querySelector("img").id
-          if(!(imagesAddedToCart.includes(imageId))){
-            setImagesAddedToCart([...imagesAddedToCart,imageId])
-          } else {
-            alert("already included")
-          }
-        }
-      }
-    >
+    <button className='add-to-cart-btn'
+          onClick={
+            (e)=>{
+              const imageId = e.target.parentElement.querySelector("img").id
+              if(!(imagesAddedToCart.includes(imageId))){
+                setImagesAddedToCart([...imagesAddedToCart,imageId])
+              } else {
+                alert("already included")
+              }
+            }
+          }>
       <div className='btn-content'>
         <p>add to cart</p>
         <div className='arrow'>

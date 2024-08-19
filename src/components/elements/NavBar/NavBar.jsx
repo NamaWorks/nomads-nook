@@ -33,8 +33,6 @@ const NavBar = ({ titleSize, navPos, navGap, navHeight, navTop, titleBottom }) =
           </li>
         </ul>
       </nav>
-
-
     </>
 
   )
