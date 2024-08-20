@@ -1,10 +1,70 @@
 .cart-page {
   padding: var(--nn-padding-100);
+  /* height: calc(950svh - 65px); */
+  display: flex;
+  flex-direction: column;
+}
+
+p.accent{
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: var(--font-size-h2);
 }
 
 .hero-cart {
   width: 100%;
   height: 30svh;
+  min-height: 100px;
+  /* max-height: 200px; */
   overflow:hidden;
   border-radius: var(--nn-border-radius-100);
+}
+
+.hero-cart img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.ticket-container {
+  margin: 2rem 0;
+}
+
+.date-order-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nn-gap-000);
+}
+
+.dotted-line {
+  border-bottom: var(--border-bottom-dashed);
+  margin: 2rem 0;
+}
+
+.ticket-item-name {
+  font-family: var(--nn-secondary-font-family);
+  font-size: var(--font-size-p);
+  text-transform: uppercase;
+}
+
+.item-count-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pre-btn {
+  justify-self: flex-end;
+}
+
+.proceed-checkout-btn {
+  justify-self: flex-end;
+}
+
+.final-part-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
 }

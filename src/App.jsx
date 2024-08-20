@@ -13,7 +13,8 @@ export const FeedContext = createContext()
 
 function App() {
 
-const [imagesAddedToCart, setImagesAddedToCart] = useState([])
+// const [imagesAddedToCart, setImagesAddedToCart] = useState(["image-id-0", "image-id-13", "image-id-30"])
+const [imagesAddedToCart, setImagesAddedToCart] = useState(["image-id-0", "image-id-13", "image-id-30"])
 
   return (
     <>

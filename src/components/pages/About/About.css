@@ -70,6 +70,10 @@ main {
   align-items: flex-end;
 }
 
+.pricing-item {
+  display: flex;
+  gap: 0.5rem;
+}
 .pricing-item p {
   text-wrap: nowrap;
 }
@@ -80,5 +84,7 @@ main {
 
 .lower-dash-container {
   width: 100%;
-  border-bottom: 1px dashed var(--nn-darkgrey);
+  border-bottom: var(--border-bottom-dashed);
+  position: relative;
+  bottom: 6px;
 }

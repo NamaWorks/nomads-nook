@@ -82,6 +82,6 @@ const feedImagesUrls = [
 export const feedImages = feedImagesUrls.map((url, i)=>{
   return {
     url: url,
-    id: `image-${i}`,
+    id: `image-id-${i}`,
   };
 })
