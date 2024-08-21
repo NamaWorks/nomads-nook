@@ -1,4 +1,4 @@
-.proceed-checkout-btn {
+.proceed-checkout-btn{
   width: 100%;
   text-transform: uppercase;
   padding: 8px 10px;
@@ -24,6 +24,16 @@
   pointer-events: none;
 }
 
+.btn-content a{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 15svw; */
+  pointer-events: none;
+}
+
 .add-to-cart-btn p{
   position: relative;
   bottom: -2px;
@@ -38,4 +48,11 @@
   height: 10px;
   pointer-events: none;
   /* overflow: hidden; */
+}
+
+a{
+  width: 100%;
+  text-transform: uppercase;
+  color: var(--nn-darkgrey);
+  text-decoration: none;
 }

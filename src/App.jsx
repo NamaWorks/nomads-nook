@@ -6,6 +6,7 @@ import About from './components/pages/About/About'
 import NotFound from './components/pages/NotFound/NotFound'
 import { createContext, useState } from 'react'
 import { feedImages } from './data/constantVariables'
+import Checkout from './components/pages/Checkout/Checkout'
 
 
 
@@ -27,6 +28,7 @@ const [imagesAddedToCart, setImagesAddedToCart] = useState(["image-id-0", "image
         <Route path='/gallery' element={ <Gallery/>} />
         <Route path='/about' element={ <About/>} />
         <Route path='/cart' element={ <Cart/>} />
+        <Route path='/checkout' element={ <Checkout/>} />
         <Route path="*" element={ <NotFound />} />
       </Routes>
       </FeedContext.Provider>
