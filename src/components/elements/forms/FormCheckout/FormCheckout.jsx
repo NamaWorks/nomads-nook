@@ -1,7 +1,8 @@
-import "./FormElement.css";
+import "./FormCheckout.css";
 import React, { createContext, useState } from "react";
+import { Link } from 'react-router-dom'
 
-const FormElement = () => {
+const FormCheckout = () => {
 
   return (
     <>
@@ -42,12 +43,14 @@ const FormElement = () => {
       console.log("button clicked")
     }}
     >
+        <Link to="/payment" >
       <div className='btn-content'>
         <p>proceed to payment</p>
         <div className='arrow'>
           <img src="assets/svg/arrow.svg" alt="" />
         </div>
       </div>
+      </Link>
     </button>
       
         </form>
@@ -55,4 +58,4 @@ const FormElement = () => {
   );
 };
 
-export default FormElement;
+export default FormCheckout;

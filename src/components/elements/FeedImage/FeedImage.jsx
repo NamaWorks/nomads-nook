@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './FeedImage.css'
-import RateButton from '../RateButton/RateButton'
-import AddToCartButton from '../AddToCartButton/AddToCartButton'
+import RateButton from '../buttons/RateButton/RateButton'
+import AddToCartButton from './../buttons/AddToCartButton/AddToCartButton.jsx'
 
 
 

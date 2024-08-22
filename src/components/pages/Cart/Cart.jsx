@@ -6,7 +6,7 @@ import { useNavScroll } from '../../../utils/hooks/useNavScroll'
 import NavBar from '../../elements/NavBar/NavBar'
 import { useDate } from '../../../utils/hooks/useDate'
 import { feedImages } from '../../../data/constantVariables'
-import ProceedToCheckoutButton from '../../elements/ProceedToCheckoutButton/ProceedToCheckoutButton'
+import ProceedToCheckoutButton from '../../elements/buttons/ProceedToCheckoutButton/ProceedToCheckoutButton'
 
 
 const Cart = () => {

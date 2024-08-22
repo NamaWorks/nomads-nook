@@ -2,7 +2,7 @@ import './Checkout.css'
 import { useNavScroll } from '../../../utils/hooks/useNavScroll'
 import NavBar from '../../elements/NavBar/NavBar'
 import React, { createContext, useContext, useState } from 'react'
-import FormElement from '../../elements/FormElement/FormElement'
+import FormCheckout from '../../elements/forms/FormCheckout/FormCheckout'
 
 
 export const FormContext = createContext();
@@ -34,7 +34,7 @@ const Checkout = () => {
 
         <section className='purchase-half'>
           <h3 className='purchase-title'>purchase</h3>
-          <FormElement />
+          <FormCheckout />
         </section>
       </main>
       </FormContext.Provider>

@@ -7,6 +7,7 @@ import NotFound from './components/pages/NotFound/NotFound'
 import { createContext, useState } from 'react'
 import { feedImages } from './data/constantVariables'
 import Checkout from './components/pages/Checkout/Checkout'
+import Payment from './components/pages/Payment/Payment'
 
 
 
@@ -29,6 +30,7 @@ const [imagesAddedToCart, setImagesAddedToCart] = useState(["image-id-0", "image
         <Route path='/about' element={ <About/>} />
         <Route path='/cart' element={ <Cart/>} />
         <Route path='/checkout' element={ <Checkout/>} />
+        <Route path='/payment' element={ <Payment/>} />
         <Route path="*" element={ <NotFound />} />
       </Routes>
       </FeedContext.Provider>
