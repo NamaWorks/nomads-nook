@@ -6,7 +6,7 @@
 }
 
 p.accent{
-  font-weight: 300;
+  font-weight: var(--font-weight-h);
   text-transform: uppercase;
   font-size: var(--font-size-h2);
 }

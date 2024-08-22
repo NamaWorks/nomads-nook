@@ -1,14 +1,21 @@
 import './Checkout.css'
 import { useNavScroll } from '../../../utils/hooks/useNavScroll'
 import NavBar from '../../elements/NavBar/NavBar'
-import React from 'react'
+import React, { createContext, useContext, useState } from 'react'
+import FormElement from '../../elements/FormElement/FormElement'
+
+
+export const FormContext = createContext();
 
 const Checkout = () => {
+
+  const [licenseSelected, setLicenseSelected] = useState();
   
   const { titleSize, navPos, navGap, navHeight, navTop, titleBottom } = useNavScroll(false)
 
   return (
     <>
+    <FormContext.Provider value={{licenseSelected, setLicenseSelected}}>
       <NavBar
         titleSize={titleSize}
         navPos={navPos}
@@ -24,7 +31,13 @@ const Checkout = () => {
             <img src="https://res.cloudinary.com/dgrhbsilh/image/upload/v1723556867/21_RTC_P12_react-advanced/pexels-i-rem-cilingir-1447385586-26737193_fhyjca.jpg" alt="" />
           </div>
         </section>
+
+        <section className='purchase-half'>
+          <h3 className='purchase-title'>purchase</h3>
+          <FormElement />
+        </section>
       </main>
+      </FormContext.Provider>
     </>
   )
 }
