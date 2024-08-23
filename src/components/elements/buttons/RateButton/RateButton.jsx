@@ -17,27 +17,6 @@ const RateButton = () => {
         <p>rate picture</p>
       </button>
 
-      {/* <ul className='ul-ratings'>
-          <li>
-            <button>sucks</button>
-          </li>
-          <li>
-            <button>bad</button>
-          </li>
-          <li>
-            <button>regular</button>
-          </li>
-          <li>
-            <button>that's okay</button>
-          </li>
-          <li>
-            <button>seems nice</button>
-          </li>
-          <li>
-            <button>love it!</button>
-          </li>
-        </ul> */}
-
       {!clicked && (
         <ul className="ul-ratings hidden">
           <li>

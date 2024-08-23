@@ -50,6 +50,7 @@
   align-items: center;
   justify-content: center;
   background-color: var(--nn-white);
+  margin-bottom: var(--nn-margin-main-100);
 }
 
 .payment-pricing {

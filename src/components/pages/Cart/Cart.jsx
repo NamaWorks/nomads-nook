@@ -67,6 +67,7 @@ const Cart = () => {
             </div>
         <div className='pre-btn'>
         <div className="dotted-line"></div>
+        
         <FormButton 
             btnClass="proceed-checkout-btn"
             color="cream"

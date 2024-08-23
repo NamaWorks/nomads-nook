@@ -10,7 +10,11 @@ const FeedImage = ({ url, i }) => {
   const [imgHover, setImgHover] = useState(false)
 
   return (
-    <div className="feed-image-container">
+    <div 
+      className="feed-image-container"
+      onMouseEnter={()=>{setImgHover(true)}}
+      onMouseLeave={()=>{setImgHover(false)}}
+    >
       <img 
         src={url} 
         alt={`image-id-${i}`}
