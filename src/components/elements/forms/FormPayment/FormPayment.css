@@ -1,0 +1,47 @@
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nn-gap-100);
+  width: 100%;
+}
+
+label {
+  display:none;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  padding: var(--nn-padding-000);
+  background-color: var(--nn-cream-200);
+  font-family: var(--nn-secondary-font-family);
+  text-transform: uppercase;
+  font-size: var(--font-size-p);
+  border-radius: var(--nn-border-radius-btn-100);
+}
+
+input::placeholder {
+  padding: var(--nn-padding-000);
+  color: var(--nn-darkgrey);
+}
+
+.card-information {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nn-gap-100);
+  padding-top: var(--nn-padding-100);
+}
+
+.card-info-text {
+  font-size: 12px;
+  font-family: var(--nn-secondary-font-family);
+  color: var(--nn-darkgrey);
+  text-transform: uppercase;
+}
+
+.card-data-row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--nn-gap-100);
+}

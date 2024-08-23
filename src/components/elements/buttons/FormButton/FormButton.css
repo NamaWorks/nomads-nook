@@ -1,4 +1,4 @@
-.proceed-checkout-btn{
+.form-button{
   width: 100%;
   text-transform: uppercase;
   padding: 8px 10px;
@@ -9,10 +9,36 @@
   justify-content: space-between;
   font-size: var(--font-size-p-btn);
   border-radius: var(--nn-border-radius-btn-100);
-  background: var(--nn-cream-300);
+  
   /* filter: drop-shadow(0px 0px 15px #00000028); */
   cursor: pointer;
 }
+
+.cream {
+  background-color: var(--nn-cream-300);
+  color: var(--nn-darkgrey);
+}
+
+.white {
+  background-color: var(--nn-white);
+  color: var(--nn-darkgrey);
+}
+
+.blue {
+  background-color: var(--nn-accent-blue);
+  color: var(--nn-darkgrey);
+}
+
+.green {
+  background-color: var(--nn-accent-green);
+  color: var(--nn-darkgrey);
+}
+
+.coral {
+  background-color: var(--nn-accent-coral);
+  color: var(--nn-darkgrey); 
+}
+
 
 .btn-content {
   width: 100%;

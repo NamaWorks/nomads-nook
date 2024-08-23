@@ -6,7 +6,7 @@ import { useNavScroll } from '../../../utils/hooks/useNavScroll'
 import NavBar from '../../elements/NavBar/NavBar'
 import { useDate } from '../../../utils/hooks/useDate'
 import { feedImages } from '../../../data/constantVariables'
-import ProceedToCheckoutButton from '../../elements/buttons/ProceedToCheckoutButton/ProceedToCheckoutButton'
+import FormButton from '../../elements/buttons/FormButton/FormButton'
 
 
 const Cart = () => {
@@ -67,7 +67,13 @@ const Cart = () => {
             </div>
         <div className='pre-btn'>
         <div className="dotted-line"></div>
-        <ProceedToCheckoutButton />
+        <FormButton 
+            btnClass="proceed-checkout-btn"
+            color="cream"
+            // fnc=
+            link="/checkout"
+            text="proceed to checkout"
+          />
           </div>
           </div>
         </div>
