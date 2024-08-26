@@ -2,13 +2,12 @@
   z-index: 99;
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 24px;
   margin: var(--nn-margin-btn-100);
   text-transform: uppercase;
   background: none;
   color: var(--nn-white);
   cursor: pointer;
-
   transition: var(--nn-animations-time-100) var(--nn-animations-smooth-enter);
 
   @starting-style {
@@ -20,9 +19,9 @@
 .ul-ratings {
   position: absolute;
   bottom: calc(0% + 30px);
-  right: 0;
+  right: 10px;
   margin: var(--nn-margin-btn-100);
-  width: 5rem;
+  width: rem;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -31,11 +30,12 @@
   list-style: none;
   border-radius: var(--nn-border-radius-000);
   padding: var(--nn-padding-100);
-  gap: calc(var(--nn-padding-100));
+  gap: calc(1*var(--nn-gap-100));
   filter: drop-shadow(0px 0px 15px #00000028);
   overflow: hidden;
   opacity: 1;
   /* transition: 1s ease-in-out; */
+  z-index: 9999;
 
   transition: var(--nn-animations-time-100) var(--nn-animations-smooth-enter);
 
@@ -57,5 +57,7 @@
 
 .hidden {
   opacity: 0;
+  display: none;
   transition: 1s ease-in-out;
+  cursor: none;
 }

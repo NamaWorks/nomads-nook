@@ -21,7 +21,7 @@ const FeedImage = ({ url, i }) => {
         id={`image-id-${i}`}
       />
 
-      {imgHover && <RateButton />}
+      {imgHover ? <RateButton shown={true} /> : <RateButton shown={false} />}
       {imgHover && <AddToCartButton />}
     </div>
   )

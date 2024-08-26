@@ -56,6 +56,7 @@ p.accent{
 
 .pre-btn {
   justify-self: flex-end;
+  margin-bottom: var(--nn-margin-100);
 }
 
 .proceed-checkout-btn {

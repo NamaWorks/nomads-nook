@@ -1,21 +1,39 @@
 import "./FormCheckout.css";
-import React, { createContext, useState } from "react";
+import { useReducer, } from "react";
 import { Link } from 'react-router-dom'
+import { licenseInitialState, licenseReducer } from "../../../../utils/reducers/licenseReducer";
+import { useContext } from "react";
+import { FormContext } from "../../../../App";
+
 
 const FormCheckout = () => {
+  const formsElements = useContext(FormContext)
+
+  let {licenseInfo} = formsElements
+  let {setLicenseInfo} = formsElements
+
+  const [stateLicenseInfo ,dispatchLicenseInfo] = useReducer(licenseReducer, licenseInitialState)
+
 
   return (
     <>
+    {console.log(licenseInfo)}
         <form>
           <select
             name="select-license"
             id="select-license"
-            defaultChecked={"type of license"}
+            defaultChecked={ licenseInfo.license || "type of license"}
+            value={ licenseInfo.license || "type of license"}
+            onChange={(e)=>{
+              console.log(e.target.value)
+              dispatchLicenseInfo({ type: e.target.value, params: {licenseInfo: licenseInfo, setLicenseInfo: setLicenseInfo}})
+              console.log(licenseInfo)
+            }}
           >
             <option hidden>type of license</option>
-            <option value="personal">personal</option>
-            <option value="comercial">comercial</option>
-            <option value="other">other </option>
+            <option value="personal">personal license</option>
+            <option value="commercial">commercial license</option>
+            <option value="extended">extended license</option>
           </select>
 
           <label htmlFor="name-input">name</label>

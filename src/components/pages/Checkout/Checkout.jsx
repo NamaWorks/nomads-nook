@@ -3,19 +3,14 @@ import { useNavScroll } from '../../../utils/hooks/useNavScroll'
 import NavBar from '../../elements/NavBar/NavBar'
 import React, { createContext, useContext, useState } from 'react'
 import FormCheckout from '../../elements/forms/FormCheckout/FormCheckout'
-
-
-export const FormContext = createContext();
+import { licenseInitialState } from '../../../utils/reducers/licenseReducer'
 
 const Checkout = () => {
-
-  const [licenseSelected, setLicenseSelected] = useState();
   
   const { titleSize, navPos, navGap, navHeight, navTop, titleBottom } = useNavScroll(false)
 
   return (
     <>
-    <FormContext.Provider value={{licenseSelected, setLicenseSelected}}>
       <NavBar
         titleSize={titleSize}
         navPos={navPos}
@@ -37,7 +32,6 @@ const Checkout = () => {
           <FormCheckout />
         </section>
       </main>
-      </FormContext.Provider>
     </>
   )
 }

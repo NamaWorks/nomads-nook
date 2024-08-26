@@ -1,77 +1,61 @@
 import './RateButton.css'
 import React, { useState } from 'react'
 
-const RateButton = () => {
+const RateButton = ({shown}) => {
 
   const [clicked, setClicked] = useState(false)
-  const [rate, setRate] = useState("none")
+  const [imageRate, setImageRate] = useState()
 
   return (
     <>
-      <button
-        className="rate-btn"
-        onClick={() => {
-          clicked ? setClicked(false) : setClicked(true);
-        }}
-      >
-        <p>rate picture</p>
-      </button>
+      {shown && (
+              <button
+              className="rate-btn"
+              onClick={() => {
+                clicked ? setClicked(false) : setClicked(true);
+              }}
+            >
+              <p>{imageRate || "rate image"}</p>
+            </button>
+      )}
 
-      {!clicked && (
+      {!clicked && !shown && (
         <ul className="ul-ratings hidden">
+        </ul>
+      )}
+
+      {clicked && shown && (
+          <ul className="ul-ratings">
           <li>
             <button
-            onClick={()=>(setRate("sucks"))}
+            onClick={()=>(setImageRate("sucks"))}
             >sucks</button>
           </li>
           <li>
             <button
-            onClick={()=>(setRate("bad"))}
+            onClick={()=>(setImageRate("bad"))}
             >bad</button>
           </li>
           <li>
             <button
-            onClick={()=>(setRate("regular"))}
+            onClick={()=>(setImageRate("regular"))}
             >regular</button>
           </li>
           <li>
             <button
-            onClick={()=>(setRate("that's okay"))}
+            onClick={()=>(setImageRate("that's okay"))}
             >that's okay</button>
           </li>
           <li>
             <button
-            onClick={()=>(setRate("seems nice"))}
+            onClick={()=>(setImageRate("seems nice"))}
             >seems nice</button>
           </li>
           <li>
             <button
-            onClick={()=>(setRate("love it"))}
+            onClick={()=>(setImageRate("love it!"))}
             >love it!</button>
           </li>
-        </ul>
-      )}
-
-      {clicked && (
-          <ul className="ul-ratings">
-            <li>
-              <button>sucks</button>
-            </li>
-            <li>
-              <button>bad</button>
-            </li>
-            <li>
-              <button>regular</button>
-            </li>
-            <li>
-              <button>that's okay</button>
-            </li>
-            <li>
-              <button>seems nice</button>
-            </li>
-            <li>
-              <button>love it!</button>
-            </li>
           </ul>
       )}
     </>

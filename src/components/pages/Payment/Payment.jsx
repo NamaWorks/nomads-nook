@@ -1,11 +1,15 @@
+import { FeedContext, FormContext } from '../../../App'
 import { useNavScroll } from '../../../utils/hooks/useNavScroll'
 import FormPayment from '../../elements/forms/FormPayment/FormPayment'
 import NavBar from '../../elements/NavBar/NavBar'
 import './Payment.css'
 
-import React from 'react'
+
+import React, { useContext } from 'react'
 
 const Payment = () => {
+  const {imagesAddedToCart} = useContext(FeedContext)
+  let {licenseInfo} = useContext(FormContext)
 
   const { titleSize, navPos, navGap, navHeight, navTop, titleBottom } = useNavScroll(false)
 
@@ -29,7 +33,11 @@ const Payment = () => {
       <section className='payment-half'>
         <h3 className='payment-title'>payment</h3>
         <div className='price-container'>
-          <p className='payment-pricing'> $00.00</p>
+          <p className='payment-pricing'> 
+            {
+              licenseInfo.license + " " + "$" + (imagesAddedToCart.length*licenseInfo.pricePerImage).toFixed(2)
+            } 
+            </p>
         </div>
 
 <FormPayment />

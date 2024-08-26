@@ -45,3 +45,8 @@ input::placeholder {
   flex-direction: row;
   gap: var(--nn-gap-100);
 }
+
+.hidden {
+  opacity: 0.35;
+  cursor: default;
+}
