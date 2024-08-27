@@ -10,8 +10,7 @@
 }
 
 .image-half {
-
-  width: 40svw;
+  min-width: 40svw;
   overflow: hidden;
 }
 
@@ -30,6 +29,7 @@
 }
 
 .payment-half {
+  position: relative;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -37,6 +37,7 @@
   align-items: flex-end;
   background-color: var(--nn-cream-300);
   padding: var(--nn-padding-100);
+  overflow: scroll;
 }
 
 .payment-title {

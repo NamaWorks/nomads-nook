@@ -1,0 +1,62 @@
+.notification-popup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: calc(2*var(--nn-padding-100));
+  transition: var(--nn-animations-time-200) var(--nn-animations-smooth-enter);
+
+  @starting-style {
+    top:-500px
+  }
+
+}
+
+.coral {
+  background-color: var(--nn-accent-coral);
+}
+
+.green {
+  background-color: var(--nn-accent-green);
+}
+
+.blue {
+  background-color: var(--nn-accent-blue);
+}
+
+.notification-popup .text-half {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nn-gap-000);
+}
+
+.notification-popup .title {
+  font-family: var(--nn-main-font-family);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.notification-popup .text {
+  font-family: var(--nn-secondary-font-family);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.notification-popup .closing-btn {
+  background-color: var(--nn-white);
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+}
+
+.notification-popup .closing-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--nn-secondary-font-family);
+  cursor: pointer;
+}

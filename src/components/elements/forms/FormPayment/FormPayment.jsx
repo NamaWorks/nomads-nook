@@ -35,7 +35,7 @@ const FormPayment = () => {
   
               <label htmlFor="cvc">cvc</label>
               <input type="number" disabled placeholder='cvc'/>
-  
+
             </div>
   
   

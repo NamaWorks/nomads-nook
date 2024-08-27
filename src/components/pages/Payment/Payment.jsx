@@ -2,6 +2,7 @@ import { FeedContext, FormContext } from '../../../App'
 import { useNavScroll } from '../../../utils/hooks/useNavScroll'
 import FormPayment from '../../elements/forms/FormPayment/FormPayment'
 import NavBar from '../../elements/NavBar/NavBar'
+import PopUp from '../../elements/PopUp/PopUp'
 import './Payment.css'
 
 
@@ -23,6 +24,7 @@ const Payment = () => {
       navTop={navTop}
       titleBottom={titleBottom}
     />
+
     <main className="payment-page">
       <section className='image-half'>
         <div className="image-container">
@@ -31,6 +33,13 @@ const Payment = () => {
       </section>
 
       <section className='payment-half'>
+      <PopUp
+      color={"coral"} 
+      title={"please enter these details for the test:"}
+      textA={"CARD NO: 1234 1234 1234 1234"}
+      textB={"Expiration Date (MM/YY): 01/28"}
+      textC={"CVV/CVC:000"}
+    />
         <h3 className='payment-title'>payment</h3>
         <div className='price-container'>
           <p className='payment-pricing'> 

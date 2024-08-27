@@ -63,7 +63,7 @@ const About = () => {
               <li className="pricing-item">
                 <p>personal use license</p>
                 <div className="lower-dash-container"></div>
-                <p className="price">$29 per image</p>
+                <p className="price">$00 per image</p>
               </li>
               <li className="pricing-item">
                 <p>commercial license</p>

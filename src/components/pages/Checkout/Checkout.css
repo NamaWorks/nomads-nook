@@ -10,7 +10,7 @@
 }
 
 .image-half {
-  width: 40svw;
+  min-width: 40svw;
   overflow: hidden;
 }
 
