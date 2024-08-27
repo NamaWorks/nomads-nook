@@ -1,0 +1,15 @@
+.image-preview {
+  width: 15svw;
+  position: absolute;
+  border: 2px solid var(--nn-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.image-preview img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}

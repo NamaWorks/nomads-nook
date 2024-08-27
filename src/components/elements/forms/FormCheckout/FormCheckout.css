@@ -36,9 +36,17 @@ input {
   border-radius: var(--nn-border-radius-btn-100);
 }
 
+input[type="email"] {
+  text-transform: none;
+}
+
 input::placeholder {
   padding: var(--nn-padding-000);
   color: var(--nn-darkgrey);
+}
+
+input[type="email"]::placeholder {
+  text-transform: uppercase;
 }
 
 .checkboxes-container {

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { licenseInitialState, licenseReducer } from "../../../../utils/reducers/licenseReducer";
 import { useContext } from "react";
 import { FormContext } from "../../../../App";
+import FormInput from "../FormInput/FormInput";
 
 
 const FormCheckout = () => {
@@ -17,7 +18,6 @@ const FormCheckout = () => {
 
   return (
     <>
-    {console.log(licenseInfo)}
         <form>
           <select
             name="select-license"
@@ -36,25 +36,32 @@ const FormCheckout = () => {
             <option value="extended">extended license</option>
           </select>
 
-          <label htmlFor="name-input">name</label>
-          <input id="name-input" type="text" placeholder="name" />
-          <label htmlFor="surname-input">surname</label>
-          <input id="surname-input" type="text" placeholder="surname" />
-          <label htmlFor="email-input">email</label>
-          <input id="email-input" type="email" placeholder="email" />
+          {/* <label htmlFor="name-input">name</label>
+          <input id="name-input" type="text" placeholder="name" /> */}
+          <FormInput id={"name-input"} type={"text"} placeholder={"name"}/>
+
+          {/* <label htmlFor="surname-input">surname</label>
+          <input id="surname-input" type="text" placeholder="surname" /> */}
+          <FormInput id={"surname-input"} type={"text"} placeholder={"surname"}/>
+
+          {/* <label htmlFor="email-input">email</label>
+          <input id="email-input" type="email" placeholder="email" /> */}
+          <FormInput id={"email-input"} type={"email"} placeholder={"email"}/>
 
       <div className="checkboxes-container">
           <div className="checkbox-container">
-            <input id="conditions-input" type="checkbox" />
-            <label htmlFor="conditions-input">Accept conditions</label>
+            {/* <input id="conditions-input" type="checkbox" />
+            <label htmlFor="conditions-input">Accept conditions</label> */}
+            <FormInput id={"conditions-input"} type={"checkbox"} placeholder={"Accept conditions"}/>
           </div>
           <div className="checkbox-container">
-            <input id="newsletter-input" type="checkbox" />
-            <label htmlFor="newsletter-input"> join newsletter</label>
+            {/* <input id="newsletter-input" type="checkbox" />
+            <label htmlFor="newsletter-input"> join newsletter</label> */}
+            <FormInput id={"newsletter-input"} type={"checkbox"} placeholder={"join newsletter"}/>
           </div>
       </div>
       
-    <button 
+    {/* <button 
     className='form-next-btn'
     onClick={(e)=>{
       e.preventDefault()
@@ -69,7 +76,7 @@ const FormCheckout = () => {
         </div>
       </div>
       </Link>
-    </button>
+    </button> */}
       
         </form>
     </>

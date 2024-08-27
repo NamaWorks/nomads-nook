@@ -7,6 +7,8 @@ import NavBar from '../../elements/NavBar/NavBar'
 import { useDate } from '../../../utils/hooks/useDate'
 import { feedImages } from '../../../data/constantVariables'
 import FormButton from '../../elements/buttons/FormButton/FormButton'
+import HoverCartImage from '../../elements/HoverCartImage/HoverCartImage'
+import TicketItem from '../../elements/TicketItem/TicketItem'
 
 
 const Cart = () => {
@@ -50,9 +52,7 @@ const Cart = () => {
               });
               if (image) {
                 return (
-                  <div key={i} className="ticket-item">
-                    <p className="ticket-item-name">{image.id}</p>
-                  </div>
+                  <TicketItem key ={i} image={image} />
                 );
               }
             })}
