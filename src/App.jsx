@@ -19,6 +19,9 @@ function App() {
 
 const [imagesAddedToCart, setImagesAddedToCart] = useState(["image-id-0", "image-id-13", "image-id-30"])
 const [licenseInfo, setLicenseInfo] = useState(licenseInitialState)
+const [checkoutInformation, setCheckoutInformation] = useState({name:"", surname:"", email:"", conditions:false, newsletter:false})
+const [paymentInformation, setPaymentInformation] = useState({billingAddress:"", country:"", vatNumber:""})
+const [cardInformation, setCardInformation] = useState({cardNumber:0, expirationDate:"", cvc:0})
 
 
   return (
@@ -26,7 +29,7 @@ const [licenseInfo, setLicenseInfo] = useState(licenseInitialState)
 
     {/* We don't use the navbar here because we want a different layout in the pages, so we print it inside each page, we just have to make sure the paths in the NavLink or Links are not relative by adding / => path="/about"  || instead of => path="about"*/}
     <FeedContext.Provider value={{imagesAddedToCart, setImagesAddedToCart}}>
-    <FormContext.Provider value={{licenseInfo, setLicenseInfo}}>
+    <FormContext.Provider value={{licenseInfo, setLicenseInfo, checkoutInformation, setCheckoutInformation, paymentInformation, setPaymentInformation, cardInformation, setCardInformation}}>
       <Routes>
         <Route index element={ <Gallery/> } />
         <Route path='/' element={ <Gallery/> } />

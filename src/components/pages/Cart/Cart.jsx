@@ -1,5 +1,5 @@
 import './Cart.css'
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { FeedContext } from '../../../App'
 import { useNavScroll } from '../../../utils/hooks/useNavScroll'
 

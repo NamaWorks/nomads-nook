@@ -1,5 +1,6 @@
 import { FormContext } from '../../../../App.jsx'
 import FormButton from '../../buttons/FormButton/FormButton.jsx'
+import FormInput from '../FormInput/FormInput.jsx'
 import CardInformation from './CardInformation/CardInformation.jsx'
 import './FormPayment.css'
 
@@ -16,11 +17,11 @@ const FormPayment = () => {
     <>
       <form>
 
-        <label htmlFor="billing-address">billing address</label>
-        <input id='billing-address' type="text" placeholder='billling adress' />
+        <FormInput id={"billing-address"} type={"text"} placeholder={"billing address"} />
 
-        <label htmlFor="country">country</label>
-        <input id='country' type="text" placeholder='country' />
+        <FormInput id={"country"} type={"text"} placeholder={"country"} />
+
+        <FormInput id={"vat-number"} type={"text"} placeholder={"VAT number"} />
 
           {licenseInfo.license == "personal" && <CardInformation hidden={true} />}
           {!(licenseInfo.license == "personal") && <CardInformation hidden={false} />}
