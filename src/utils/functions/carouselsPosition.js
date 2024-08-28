@@ -1,9 +1,10 @@
 export const moveCarousel = (carousel, duration) => {
+  console.log(carousel)
 
   carousel.style.transition = duration  + "s" +  " linear"
   
-  carousel.style.left = `0px`
-  carousel.style.left = `-${carousel.scrollWidth/2 +8}px`
+  carousel.style.top = `0px`
+  carousel.style.top = `-${carousel.scrollHeight/2}px`
   
   setTimeout(() => {
     // console.log("setTimeOut executed")
@@ -13,7 +14,7 @@ export const moveCarousel = (carousel, duration) => {
 
 const backToOrigin = (carousel, duration) => {
   carousel.style.transition = 0  + "s" +  " linear"
-  carousel.style.left = `0px`
+  carousel.style.top = `0px`
   // console.log("returned to original position")
 
   setTimeout(() => {
