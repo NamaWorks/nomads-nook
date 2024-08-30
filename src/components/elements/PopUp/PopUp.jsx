@@ -1,7 +1,7 @@
 import './PopUp.css'
 import React from 'react'
 
-const PopUp = ({title, textA, textB, textC, color}) => {
+const PopUp = ({title, textA, textB, textC, textD, color}) => {
   return (
     <>
     <div className={`notification-popup ${color}`}>
@@ -11,6 +11,7 @@ const PopUp = ({title, textA, textB, textC, color}) => {
         {textA && <p className="text">{textA}</p>}
         {textB && <p className="text">{textB}</p>}
         {textC && <p className="text">{textC}</p>}
+        {textD && <p className="text">{textD}</p>}
         </div>
       </div>
       <div className='closing-icon'>

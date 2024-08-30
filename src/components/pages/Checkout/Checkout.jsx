@@ -1,13 +1,15 @@
 import './Checkout.css'
 import { useNavScroll } from '../../../utils/hooks/useNavScroll'
 import NavBar from '../../elements/NavBar/NavBar'
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 import FormCheckout from '../../elements/forms/FormCheckout/FormCheckout'
-import { licenseInitialState } from '../../../utils/reducers/licenseReducer'
+import PopUp from '../../elements/PopUp/PopUp'
 
 const Checkout = () => {
   
   const { titleSize, navPos, navGap, navHeight, navTop, titleBottom } = useNavScroll(false)
+  const [popupTextsCheckout, setPopupTextsCheckout] = useState([])
+  const [buttonHoveredCheckout, setButtonHoveredCheckout] = useState(false)
 
   return (
     <>
@@ -28,8 +30,9 @@ const Checkout = () => {
         </section>
 
         <section className='purchase-half'>
+          { buttonHoveredCheckout && popupTextsCheckout.length && <PopUp color={"blue"} title={"please check the form fields:"} textA={popupTextsCheckout[0]} textB={popupTextsCheckout[1]} textC={popupTextsCheckout[2]} textD={popupTextsCheckout[3]} />}
           <h3 className='purchase-title'>purchase</h3>
-          <FormCheckout />
+          <FormCheckout popupTexts={popupTextsCheckout} setPopupTexts={setPopupTextsCheckout} setButtonHovered={setButtonHoveredCheckout} buttonHovered={buttonHoveredCheckout} />
         </section>
       </main>
     </>

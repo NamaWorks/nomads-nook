@@ -1,5 +1,3 @@
-import { FormContext } from "../../App"
-
 export const checkoutFormChecker = (formObj) => {
   const { checkoutInformation } = formObj
   const { licenseInfo } = formObj
@@ -19,15 +17,19 @@ let requiredFields = {
 
 let activate = true
 
-if(!(name.length == "")){
+if(!(name == "")){
   requiredFields.name = true
 }
-if(surname.length>=1){
+if(!(surname == "")){
   requiredFields.surname = true
 }
-if(email.length>=5 && email.includes("@")){
-  requiredFields.email = true
+
+if(email){
+  if(email.length>=5 && email.includes("@")){
+    requiredFields.email = true
+  }
 }
+
 if(conditions){
   requiredFields.conditions = true
 }
@@ -43,6 +45,5 @@ if(!requiredFields[field]){
   } else {msg.push(`make sure you added a correct ${field}`)}
 }
 }
-
-return activate
+return {activate:activate, infoToDisplay:msg}
 }

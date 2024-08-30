@@ -1,5 +1,5 @@
 import "./FormCheckout.css";
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 import {
   licenseInitialState,
   licenseReducer,
@@ -10,13 +10,15 @@ import FormInput from "../FormInput/FormInput";
 import FormButton from "../../buttons/FormButton/FormButton";
 import { checkoutFormChecker } from "../../../../utils/functions/checkoutFormChecker";
 
-const FormCheckout = () => {
+const FormCheckout = ({popupTexts, setPopupTexts, setButtonHovered, buttonHovered}) => {
   const formsElements = useContext(FormContext);
 
-  let { licenseInfo } = formsElements;
-  let { checkoutInformation } = formsElements;
-  let { setCheckoutInformation } = formsElements;
-  let { setLicenseInfo } = formsElements
+  const { licenseInfo } = formsElements;
+  const { checkoutInformation } = formsElements;
+  const { setCheckoutInformation } = formsElements;
+  const { setLicenseInfo } = formsElements
+
+  
 
   const [stateLicenseInfo, dispatchLicenseInfo] = useReducer(
     licenseReducer,
@@ -32,7 +34,6 @@ const FormCheckout = () => {
           defaultChecked={licenseInfo.license || "type of license"}
           value={licenseInfo.license || "type of license"}
           onChange={(e) => {
-            console.log(e.target.value);
             dispatchLicenseInfo({
               type: e.target.value,
               params: {
@@ -40,7 +41,6 @@ const FormCheckout = () => {
                 setLicenseInfo: setLicenseInfo,
               },
             });
-            console.log(licenseInfo);
           }}
         >
           <option hidden>type of license</option>
@@ -83,6 +83,8 @@ const FormCheckout = () => {
           toCheck={{ licenseInfo, checkoutInformation }}
           link="/payment"
           text="proceed to payment"
+          popupTexts={popupTexts} setPopupTexts={setPopupTexts} 
+          setButtonHovered={setButtonHovered} buttonHovered={buttonHovered}
         />
       </form>
     </>
