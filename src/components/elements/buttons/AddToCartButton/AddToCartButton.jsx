@@ -3,8 +3,6 @@ import './AddToCartButton.css'
 
 import React, { useContext, useState } from 'react'
 
-
-
 const AddToCartButton = ({alreadyAdded, setAlreadyAdded}) => {
 
   console.log(alreadyAdded)

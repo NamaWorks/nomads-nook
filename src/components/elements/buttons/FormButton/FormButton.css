@@ -81,4 +81,17 @@ a{
   text-transform: uppercase;
   color: var(--nn-darkgrey);
   text-decoration: none;
+  cursor: pointer;
+}
+
+.abled {
+  cursor: pointer;
+  /* pointer-events: none; */
+  opacity: 1;
+}
+
+.disabled {
+  cursor: none;
+  pointer-events: none;
+  opacity: .5;
 }

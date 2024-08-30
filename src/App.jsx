@@ -27,7 +27,8 @@ const [cardInformation, setCardInformation] = useState({cardNumber:0, expiration
   return (
     <>
 
-    {/* We don't use the navbar here because we want a different layout in the pages, so we print it inside each page, we just have to make sure the paths in the NavLink or Links are not relative by adding / => path="/about"  || instead of => path="about"*/}
+{/* We don't use the navbar here because we want a different layout in the pages, so we print it inside each page, we just have to make sure the paths in the NavLink or Links are not relative by adding / => path="/about"  || instead of => path="about"*/}
+
     <FeedContext.Provider value={{imagesAddedToCart, setImagesAddedToCart}}>
     <FormContext.Provider value={{licenseInfo, setLicenseInfo, checkoutInformation, setCheckoutInformation, paymentInformation, setPaymentInformation, cardInformation, setCardInformation}}>
       <Routes>

@@ -1,21 +1,27 @@
 import "./FormCheckout.css";
-import { useReducer, } from "react";
-import { Link } from 'react-router-dom'
-import { licenseInitialState, licenseReducer } from "../../../../utils/reducers/licenseReducer";
+import { useReducer } from "react";
+import {
+  licenseInitialState,
+  licenseReducer,
+} from "../../../../utils/reducers/licenseReducer";
 import { useContext } from "react";
 import { FormContext } from "../../../../App";
 import FormInput from "../FormInput/FormInput";
 import FormButton from "../../buttons/FormButton/FormButton";
-
+import { checkoutFormChecker } from "../../../../utils/functions/checkoutFormChecker";
 
 const FormCheckout = () => {
-  const formsElements = useContext(FormContext)
+  const formsElements = useContext(FormContext);
 
-  let {licenseInfo} = formsElements
-  let {setLicenseInfo} = formsElements
+  let { licenseInfo } = formsElements;
+  let { checkoutInformation } = formsElements;
+  let { setCheckoutInformation } = formsElements;
+  let { setLicenseInfo } = formsElements
 
-  const [stateLicenseInfo, dispatchLicenseInfo] = useReducer(licenseReducer, licenseInitialState)
-
+  const [stateLicenseInfo, dispatchLicenseInfo] = useReducer(
+    licenseReducer,
+    licenseInitialState
+  );
 
   return (
     <>
@@ -43,25 +49,38 @@ const FormCheckout = () => {
           <option value="extended">extended license</option>
         </select>
 
-        <FormInput id={"name-input"} type={"text"} placeholder={"name"} />
-        
-        <FormInput id={"surname-input"} type={"text"} placeholder={"surname"} />
+        <FormInput id={"name-input"} type={"text"} placeholder={"name"} fieldToModify={"name"} infoToChange={checkoutInformation} setInfoToChange={setCheckoutInformation} />
 
-        <FormInput id={"email-input"} type={"email"} placeholder={"email"} />
+        <FormInput id={"surname-input"} type={"text"} placeholder={"surname"} fieldToModify={"surname"} infoToChange={checkoutInformation} setInfoToChange={setCheckoutInformation}/>
+
+        <FormInput id={"email-input"} type={"email"} placeholder={"email"} fieldToModify={"email"}infoToChange={checkoutInformation} setInfoToChange={setCheckoutInformation}/>
 
         <div className="checkboxes-container">
           <div className="checkbox-container">
-            <FormInput id={"conditions-input"} type={"checkbox"} placeholder={"Accept conditions"} />
+            <FormInput
+              id={"conditions-input"}
+              type={"checkbox"}
+              placeholder={"Accept conditions"}
+              fieldToModify={"conditions"}
+              infoToChange={checkoutInformation} setInfoToChange={setCheckoutInformation}
+            />
           </div>
           <div className="checkbox-container">
-            <FormInput id={"newsletter-input"} type={"checkbox"} placeholder={"join newsletter"} />
+            <FormInput
+              id={"newsletter-input"}
+              type={"checkbox"}
+              placeholder={"join newsletter"}
+              fieldToModify={"newsletter"}
+              checkoutInformation={checkoutInformation} setInfoToChange={setCheckoutInformation}
+            />
           </div>
         </div>
 
         <FormButton
           btnClass="form-next-btn"
           color="white"
-          // fnc=
+          checkerFnc={checkoutFormChecker}
+          toCheck={{ licenseInfo, checkoutInformation }}
           link="/payment"
           text="proceed to payment"
         />

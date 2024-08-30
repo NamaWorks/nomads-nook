@@ -1,18 +1,32 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './FormButton.css'
 import { Link } from 'react-router-dom'
+import { FormContext } from '../../../../App'
 const FormButton = (props) => {
+  const formsElements = useContext(FormContext)
+  const [active, setActive] = useState(true)
+  const { checkoutInformation } = formsElements;
+
+  useEffect(()=>{
+    if(props.checkerFnc){
+      props.checkerFnc(props.toCheck) == false && setActive(false)
+      props.checkerFnc(props.toCheck) == true && setActive(true)
+    }        
+  },[checkoutInformation])
 
   return (
     <>
     <button 
-    onClick={(e)=>{
+    onMouseEnter={(e)=>{
       e.preventDefault()
-      props.fnc ? props.fnc : console.log(e.target)
+      console.warn("button hovered")
     }}
     className={`${props.btnClass || "undefined-btn"} form-button ${props.color || "cream"}`}
     >
-      <Link to={props.link || ""}>
+      <Link 
+        to={props.link || ""}
+        className={active ? "abled" : "disabled"}
+      >
       <div className='btn-content'>
         <p>{props.text || "pending to add text"}</p>
         <div className='arrow'>
