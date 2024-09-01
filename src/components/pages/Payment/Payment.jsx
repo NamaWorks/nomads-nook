@@ -6,13 +6,17 @@ import PopUp from '../../elements/PopUp/PopUp'
 import './Payment.css'
 
 
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 
 const Payment = () => {
-  const {imagesAddedToCart} = useContext(FeedContext)
-  let {licenseInfo} = useContext(FormContext)
 
   const { titleSize, navPos, navGap, navHeight, navTop, titleBottom } = useNavScroll(false)
+  const {imagesAddedToCart} = useContext(FeedContext)
+  const {licenseInfo} = useContext(FormContext)
+  const {setLicenseInfo} = useContext(FormContext)
+
+  const [popupTextsPayment, setPopupTextsPayment] = useState([])
+  const [buttonHoveredPayment, setButtonHoveredPayment] = useState(false)
 
   return (
     <>
@@ -49,7 +53,7 @@ const Payment = () => {
             </p>
         </div>
 
-<FormPayment />
+<FormPayment popupTexts={popupTextsPayment} setPopupTexts={setPopupTextsPayment} setButtonHovered={setButtonHoveredPayment} buttonHovered={buttonHoveredPayment} />
         
       </section>
     </main>

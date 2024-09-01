@@ -25,12 +25,11 @@ const FormButton = ({checkerFnc, setPopupTexts, setButtonHovered, btnClass, link
       onClick={(e)=>{e.preventDefault()}}
       onMouseEnter={(e)=>{
         e.preventDefault()
-        setButtonHovered(true)
+        setButtonHovered && setButtonHovered(true)
         console.warn("button hovered")
       }}
       onMouseLeave={()=>{
-
-          setButtonHovered(false)
+        setButtonHovered && setButtonHovered(false)
       }}
       className={`${btnClass || "undefined-btn"} form-button ${color || "cream"}`}
     >

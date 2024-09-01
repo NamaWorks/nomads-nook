@@ -10,7 +10,7 @@ const FormInput = ({id, type, placeholder, disabled=false, fieldToModify, infoTo
       placeholder={placeholder}  
       disabled={disabled}
       onChange={(e)=>{
-
+        console.log(infoToChange)
         if(type == "checkbox"){
           const newVal = {...infoToChange}
           newVal[fieldToModify] = e.target.checked

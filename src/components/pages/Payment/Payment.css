@@ -37,7 +37,7 @@
   align-items: flex-end;
   background-color: var(--nn-cream-300);
   padding: var(--nn-padding-100);
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .payment-title {
