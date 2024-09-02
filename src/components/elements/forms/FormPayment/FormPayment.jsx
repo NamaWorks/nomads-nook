@@ -31,8 +31,9 @@ const {cardInformation} = formsElements
 
         <FormInput id={"vat-number"} type={"text"} placeholder={"VAT number"} fieldToModify={"vatNumber"} infoToChange={paymentInformation} setInfoToChange={setPaymentInformation} />
 
-        {licenseInfo.license == "personal" && <CardInformation hidden={true} />}
-        {!(licenseInfo.license == "personal") && <CardInformation hidden={false} />}
+        {/* {licenseInfo.license == "personal" && <CardInformation hidden={true} />} */}
+        <CardInformation hidden={false} />
+        {/* {!(licenseInfo.license == "personal") && <CardInformation hidden={false} />} */}
 
 
           <FormButton 
