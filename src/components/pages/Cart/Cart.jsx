@@ -1,6 +1,6 @@
 import './Cart.css'
 import { useContext } from 'react'
-import { FeedContext } from '../../../App'
+import { FeedContext, FormContext } from '../../../App'
 import { useNavScroll } from '../../../utils/hooks/useNavScroll'
 
 import NavBar from '../../elements/NavBar/NavBar'
@@ -14,6 +14,7 @@ import TicketItem from '../../elements/TicketItem/TicketItem'
 const Cart = () => {
   const { titleSize, navPos, navGap, navHeight, navTop, titleBottom } = useNavScroll(false)
   const {imagesAddedToCart, setImagesAddedToCart} = useContext(FeedContext)
+  const {  orderNumber, setOrderNumber } = useContext(FormContext)
 
   return (
     <>
@@ -35,7 +36,7 @@ const Cart = () => {
 
         <div className="ticket-container">
           <div className="date-order-container">
-            <h2>order #{"43490"} for nomad's nook</h2>
+            <h2>order #{"00043490"} for nomad's nook</h2>
             <p className="accent">{`${useDate().month} ${useDate().day}, ${
               useDate().year
             } ${useDate().time}`}</p>

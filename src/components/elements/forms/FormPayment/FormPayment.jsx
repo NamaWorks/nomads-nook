@@ -41,7 +41,7 @@ const {cardInformation} = formsElements
             color="blue"
             checkerFnc={paymentFormChecker}
             toCheck={{paymentInformation, cardInformation, licenseInfo}}
-            // link="/"
+            link="/bill"
             // popupTexts={popupTexts} setPopupTexts={setPopupTexts} 
             text="pay"
           />
