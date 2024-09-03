@@ -39,7 +39,7 @@ const Payment = () => {
       <section className='payment-half'>
       <PopUp
       color={"coral"} 
-      title={"please enter these details for the test:"}
+      title={"you can use these details for the test:"}
       textA={"CARD NO: 1234 1234 1234 1234"}
       textB={"Expiration Date (MM/YY): 01/28"}
       textC={"CVV/CVC:000"}
