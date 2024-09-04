@@ -26,7 +26,10 @@ const Bill = () => {
       <main>
 
         <section id='bill-item'>
-          <h1 className='nn-logo' >NN</h1>
+          <div className="logo-container">
+          <h1 id='bill-logo' >NN</h1>
+
+          </div>
           
           <div id='order-info' className='section-part'>
             <p>order #{orderNumber}</p>
@@ -42,9 +45,7 @@ const Bill = () => {
               })
             }
           </div>
-
             <div className="dotted-line"></div>
-
             <div id='order-details' className='section-part'>
               <p>type of license: {licenseInfo.license}</p>
               <p>name: {checkoutInformation.name}</p>
@@ -54,7 +55,9 @@ const Bill = () => {
               <p>vat number: {paymentInformation.vatNumber}</p>
               <p>card Number: {cardInformation.cardNumber}</p>
             </div>
+        </section>
 
+        <section id="background-images">
 
         </section>
 
