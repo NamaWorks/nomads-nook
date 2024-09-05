@@ -10,6 +10,8 @@ const useRandomPosition = () => {
 
   setRandomPosition({top:randomTop, left:randomLeft})
 
+  console.log(randomPosition)
+
   return randomPosition
 }
 

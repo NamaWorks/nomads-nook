@@ -4,6 +4,9 @@ import NavBar from '../../elements/NavBar/NavBar'
 import { useDate } from '../../../utils/hooks/useDate'
 import './Bill.css'
 import React, { useContext } from 'react'
+import { feedImages } from '../../../data/constantVariables'
+import { useRandomPosition } from '../../../utils/hooks/useRandomPosition'
+import { getRandomPosition } from '../../../utils/functions/getRandomPosition'
 
 const Bill = () => {
 
@@ -40,8 +43,8 @@ const Bill = () => {
 
           <div id='order-items' className='section-part'>
             {
-              imagesAddedToCart.map((item)=>{
-                return(<p>{item}</p>)
+              imagesAddedToCart.map((item, i)=>{
+                return(<p key={i}>{item}</p>)
               })
             }
           </div>
@@ -59,6 +62,19 @@ const Bill = () => {
 
         <section id="background-images">
 
+
+          {
+            feedImages.map((image, i)=>{
+              if(imagesAddedToCart.includes(image.id)){
+                
+                return(
+                  <div key={i} className='image-bill' id={`${image.id}-bill`} style={{top:getRandomPosition().top/4, right:getRandomPosition().left/1}} >
+                    <img src={image.url} alt="" />
+                  </div>
+                )
+              }
+            })
+          }
         </section>
 
       </main>
