@@ -9,6 +9,7 @@ import { createContext, useState } from 'react'
 import Checkout from './components/pages/Checkout/Checkout'
 import Payment from './components/pages/Payment/Payment'
 import { licenseInitialState } from './utils/reducers/licenseReducer'
+import SingleImagePreview from './components/pages/SingleImagePreview/SingleImagePreview'
 
 
 
@@ -42,6 +43,7 @@ const [cardInformation, setCardInformation] = useState({cardNumber:0, expiration
         <Route path='/checkout' element={ <Checkout/>} />
         <Route path='/payment' element={ <Payment/>} />
         <Route path='/bill' element={ <Bill/>} />
+        <Route path='/gallery/:id' element={ <SingleImagePreview/>} />
         <Route path="*" element={ <NotFound />} />
       </Routes>
       </FormContext.Provider>
