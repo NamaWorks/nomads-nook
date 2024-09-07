@@ -1,15 +1,16 @@
-.image-preview {
-  width: 15svw;
+.ticket-item .image-preview {
+  width: 20svw;
   position: absolute;
   border: 2px solid var(--nn-white);
+  left: 42.5svw;
+  bottom: 20svh;
   overflow: hidden;
+  border-radius: 0px;
   display: flex;
-  flex-direction: row;
+
 }
 
-.image-preview img {
-  object-fit: cover;
-  object-position: center;
+.ticket-item .image-preview img {
   width: 100%;
   height: 100%;
 }

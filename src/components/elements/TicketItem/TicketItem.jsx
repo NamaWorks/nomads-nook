@@ -6,12 +6,14 @@ const TicketItem = (props) => {
 
   const [hovered, setHovered] = useState(false)
   const {image} = props
-
   return (
       <div className="ticket-item">
         <p 
           className="ticket-item-name"
-          onClick={()=>{
+          onMouseEnter={()=>{
+            setHovered(!hovered)
+          }}
+          onMouseOut={()=>{
             setHovered(!hovered)
           }}
         >{image.id}</p>

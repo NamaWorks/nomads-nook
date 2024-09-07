@@ -19,7 +19,7 @@ const SingleImagePreview = () => {
         navTop={navTop}
         titleBottom={titleBottom}
       />
-      <main>
+      <main id='image-preview-page'>
       <div className="image-preview">
         <img src={imageObject.url} alt={imageObject.id} />
       </div>

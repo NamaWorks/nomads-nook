@@ -1,0 +1,4 @@
+.ticket-item p:hover {
+  background-color: var(--nn-cream-300);
+  cursor:context-menu;
+}

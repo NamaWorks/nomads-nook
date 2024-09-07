@@ -2,7 +2,7 @@ main{
   display: flex;
 }
 
-.image-preview {
+#image-preview-page .image-preview {
   min-width: 30svw;
   min-height: 30svh;
   max-width: 80svw;
