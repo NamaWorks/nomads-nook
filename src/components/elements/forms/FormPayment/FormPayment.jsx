@@ -25,16 +25,10 @@ const {cardInformation} = formsElements
       <form>
 
         <FormInput id={"billing-address"} type={"text"} placeholder={"billing address"} fieldToModify={"billingAddress"} infoToChange={paymentInformation} setInfoToChange={setPaymentInformation}/>
-        
-
         <FormInput id={"country"} type={"text"} placeholder={"country"} fieldToModify={"country"} infoToChange={paymentInformation} setInfoToChange={setPaymentInformation} />
-
         <FormInput id={"vat-number"} type={"text"} placeholder={"VAT number"} fieldToModify={"vatNumber"} infoToChange={paymentInformation} setInfoToChange={setPaymentInformation} />
-
         {licenseInfo.license == "personal" && <CardInformation hidden={true} />}
-        {/* <CardInformation hidden={false} /> */}
         {!(licenseInfo.license == "personal") && <CardInformation hidden={false} />}
-
 
           <FormButton 
             btnClass="payment-btn"
@@ -42,14 +36,12 @@ const {cardInformation} = formsElements
             checkerFnc={paymentFormChecker}
             toCheck={{paymentInformation, cardInformation, licenseInfo}}
             link="/bill"
-            // popupTexts={popupTexts} setPopupTexts={setPopupTexts} 
             text="pay"
           />
           
           <FormButton 
             btnClass="back-to-checkout-btn"
             color="coral"
-            // checkerFnc={}
             link="/checkout"
             text="back to checkout"
           />

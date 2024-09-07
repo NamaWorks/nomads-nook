@@ -8,7 +8,7 @@ const HoverCartImage = (props) => {
     className='image-preview'
     style={{left:getRandomPosition().left, top:getRandomPosition().top}}
     >
-      <img src={image.url} alt="" />
+      <img src={image.url} alt={image.id} />
     </div>
   )
 }

@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import './TicketItem.css'
 import HoverCartImage from '../HoverCartImage/HoverCartImage'
 
-const TicketItem = (props) => {
-
+const TicketItem = React.memo((props) => {
   const [hovered, setHovered] = useState(false)
   const {image} = props
   return (
@@ -20,6 +19,6 @@ const TicketItem = (props) => {
         {hovered && <HoverCartImage image={image} />}
       </div>
   )
-}
+})
 
 export default TicketItem

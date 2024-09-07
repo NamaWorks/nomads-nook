@@ -1,7 +1,3 @@
-import React, { useContext } from 'react'
-import { FormContext } from '../../../../App'
-import { checkoutFormChecker } from '../../../../utils/functions/checkoutFormChecker'
-
 const FormInput = ({id, type, placeholder, disabled=false, fieldToModify, infoToChange, setInfoToChange}) => {
   return (
     <>

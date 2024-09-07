@@ -3,17 +3,17 @@ import { useNavScroll } from '../../../utils/hooks/useNavScroll'
 import NavBar from '../../elements/NavBar/NavBar'
 import { useDate } from '../../../utils/hooks/useDate'
 import './Bill.css'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { feedImages } from '../../../data/constantVariables'
 import { useRandomPosition } from '../../../utils/hooks/useRandomPosition'
 import { getRandomPosition } from '../../../utils/functions/getRandomPosition'
+import Date from '../../elements/Date/Date'
 
 const Bill = () => {
 
   const { titleSize, navPos, navGap, navHeight, navTop, titleBottom } = useNavScroll(false)
   const { licenseInfo, checkoutInformation, paymentInformation, cardInformation, orderNumber } = useContext(FormContext)
   const { imagesAddedToCart } = useContext(FeedContext)
-  
 
   return (
     <>
@@ -36,7 +36,7 @@ const Bill = () => {
           
           <div id='order-info' className='section-part'>
             <p>order #{orderNumber}</p>
-            <p className="accent">{`${useDate().month} ${useDate().day}, ${ useDate().year} ${useDate().time}`}</p>
+            <Date />
           </div>
 
           <div className="dotted-line"></div>

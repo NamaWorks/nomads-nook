@@ -1,20 +1,34 @@
 import './Cart.css'
-import { useContext } from 'react'
+import { useContext, useMemo } from 'react'
 import { FeedContext, FormContext } from '../../../App'
 import { useNavScroll } from '../../../utils/hooks/useNavScroll'
 
 import NavBar from '../../elements/NavBar/NavBar'
-import { useDate } from '../../../utils/hooks/useDate'
 import { feedImages } from '../../../data/constantVariables'
 import FormButton from '../../elements/buttons/FormButton/FormButton'
-import HoverCartImage from '../../elements/HoverCartImage/HoverCartImage'
 import TicketItem from '../../elements/TicketItem/TicketItem'
+import Date from '../../elements/Date/Date'
 
 
 const Cart = () => {
   const { titleSize, navPos, navGap, navHeight, navTop, titleBottom } = useNavScroll(false)
-  const {imagesAddedToCart, setImagesAddedToCart} = useContext(FeedContext)
-  const {  orderNumber, setOrderNumber } = useContext(FormContext)
+  const { imagesAddedToCart, setImagesAddedToCart} = useContext(FeedContext)
+  const { orderNumber, setOrderNumber } = useContext(FormContext)
+
+  let imagesObjToPrint = []
+
+  const imagesObjToAdd = useMemo(() => {
+    imagesAddedToCart.forEach((imageId)=>{
+    const presentImage =  feedImages.find((image) => {
+        console.log(image.id)
+        return image.id == imageId
+      });
+      imagesObjToPrint.push(presentImage)
+    })
+  }, [imagesAddedToCart])
+
+  console.log(imagesObjToAdd)
+
 
   return (
     <>
@@ -36,27 +50,23 @@ const Cart = () => {
 
         <div className="ticket-container">
           <div className="date-order-container">
-            <h2>order #{"00043490"} for nomad's nook</h2>
-            <p className="accent">{`${useDate().month} ${useDate().day}, ${
-              useDate().year
-            } ${useDate().time}`}</p>
+            <h2>order #{orderNumber} for nomad's nook</h2>
+            <Date />
           </div>
 
           <div className="dotted-line"></div>
 
-          {/* CAN WE CREATE A COMPONENT FOR THE NEXT DIV ??? ALSO COULD USE A useMemo hook */}
           <div className="added-images-container">
-            {imagesAddedToCart.map((imageId, i) => {
-              console.log(imageId);
-              const image = feedImages.find((element) => {
-                return element.id == imageId;
-              });
-              if (image) {
+
+            {
+              imagesObjToPrint.map((imageObj, i)=>{
                 return (
-                  <TicketItem key ={i} image={image} />
+                  <TicketItem key ={i} image={imageObj} />
                 );
-              }
-            })}
+              })
+            }
+
+
           </div>
 
           <div className="dotted-line"></div>
@@ -72,7 +82,6 @@ const Cart = () => {
         <FormButton 
             btnClass="proceed-checkout-btn"
             color="cream"
-            // fnc=
             link="/checkout"
             text="proceed to checkout"
           />
