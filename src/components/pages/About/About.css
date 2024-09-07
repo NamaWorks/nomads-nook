@@ -14,10 +14,12 @@ main {
 
 .about-page {
   display: flex;
+  flex-direction: row;
   background-color: var(--nn-cream-100);
   margin: var(--nn-margin-main-100);
   border-radius: var(--nn-border-radius-100);
   overflow: hidden;
+  align-items: flex-end;
 }
 
 .about-section p, .about-section li {
@@ -87,4 +89,10 @@ main {
   border-bottom: var(--border-bottom-dashed);
   position: relative;
   bottom: 6px;
+}
+
+.carousel {
+  align-self: center;
+  margin: 0;
+  padding: 0;
 }

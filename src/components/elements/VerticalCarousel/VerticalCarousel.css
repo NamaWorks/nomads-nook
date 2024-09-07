@@ -10,6 +10,7 @@
   /* gap: var(--nn-gap-000); */
   background-color: var(--nn-white);
   padding-left: var(--nn-padding-000);
+  padding-right: 0px;
   width: 100%;
   height: 100%;
   overflow: scroll;
