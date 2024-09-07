@@ -1,8 +1,11 @@
+
+
 .cart-page {
   padding: var(--nn-padding-100);
   /* height: calc(950svh - 65px); */
   display: flex;
   flex-direction: column;
+  align-items:normal;
 }
 
 p.accent{
