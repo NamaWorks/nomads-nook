@@ -16,15 +16,15 @@ const Feed = () => {
     }
     console.log(imagesAddedToFeed)
     getRandomInt(0,10)<=1 && fullWidth()
-    getRandomInt(0,10)<=2 && !(window.innerWidth<=800) && lineOfFour()
-    getRandomInt(0,10)<=3 && !(window.innerWidth<=800) && groupOfThree()
+    getRandomInt(0,10)<=1 && !(window.innerWidth<=800) && lineOfFour()
+    getRandomInt(0,10)<=1 && !(window.innerWidth<=800) && groupOfThree()
   },[imagesAddedToFeed])
   
 useEffect(() => {
   window.addEventListener("scroll", addMoreImages)
-  getRandomInt(0,10)<=1 && fullWidth()
-  getRandomInt(0,10)<=2 && !(window.innerWidth<=800) && groupOfThree()
-  getRandomInt(0,10)<=3 && !(window.innerWidth<=800) && lineOfFour()
+  // getRandomInt(0,10)<=1 && fullWidth()
+  // getRandomInt(0,10)<=2 && !(window.innerWidth<=800) && groupOfThree()
+  // getRandomInt(0,10)<=3 && !(window.innerWidth<=800) && lineOfFour()
 }, [addMoreImages])
 
 

@@ -15,8 +15,7 @@ const CardInformation = ({hidden}) => {
           
     <p className='card-info-text'>card information</p>
 
-
-<FormInput id={"card-number"} type={"number"} placeholder={"1234 1234 1234 1234"} disabled={hidden ? true : false} fieldToModify={"cardNumber"} infoToChange={cardInformation} setInfoToChange={setCardInformation} />
+      <FormInput id={"card-number"} type={"number"} placeholder={"1234 1234 1234 1234"} disabled={hidden ? true : false} fieldToModify={"cardNumber"} infoToChange={cardInformation} setInfoToChange={setCardInformation} />
 
     <div className='card-data-row'>
 

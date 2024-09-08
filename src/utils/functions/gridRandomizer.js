@@ -5,7 +5,7 @@ export const fullWidth = () => {
   for (let i = 0; i < (imgContainers.length*0.05); i++) {
     let randomIndex = getRandomInt(0, imgContainers.length-1)
     const randomImg = imgContainers[randomIndex]
-      if(!(randomImg.classList.contains("modded"))) {
+      if(!(randomImg.classList.toString().includes("modded"))) {
           randomImg.classList.add("modded")
           randomImg.classList.add("full-width")
           randomImg.style.gridColumn = "1/5"
@@ -20,7 +20,7 @@ export const lineOfFour = () => {
   const randomImg = imgContainers[randomIndex]
 
   for (let i = 0; i < (imgContainers.length*0.6); i++) {
-    if(!(randomImg.classList.contains("modded"))){
+    if(!(randomImg.classList.toString().includes("modded"))){
       let sumRest = 0
       randomIndex >= 4 ? sumRest = true : sumRest= false
 
@@ -36,7 +36,7 @@ export const lineOfFour = () => {
     } else {
 
       randomIndex+4
-      if(!(randomImg.classList.contains("modded"))){
+      if(!(randomImg.classList.toString().includes("modded"))){
         let sumRest = 0
         randomIndex >= 4 ? sumRest = true : sumRest= false
   
@@ -64,7 +64,8 @@ export const groupOfThree = () => {
   const randomImg = imgContainers[randomIndex]
 
   for (let i = 0; i < (imgContainers.length*0.6); i++) {
-    if(!(randomImg.classList.contains("modded"))){
+    if(!(randomImg.classList.toString().includes("modded"))){
+      console.log("already modded")
       let sumRest = 0
       randomIndex >= 3 ? sumRest = true : sumRest= false
 

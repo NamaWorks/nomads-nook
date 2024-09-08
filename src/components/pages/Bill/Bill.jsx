@@ -5,7 +5,6 @@ import { useDate } from '../../../utils/hooks/useDate'
 import './Bill.css'
 import React, { useContext, useEffect } from 'react'
 import { feedImages } from '../../../data/constantVariables'
-import { useRandomPosition } from '../../../utils/hooks/useRandomPosition'
 import { getRandomPosition } from '../../../utils/functions/getRandomPosition'
 import Date from '../../elements/Date/Date'
 

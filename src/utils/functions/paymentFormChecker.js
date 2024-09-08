@@ -8,7 +8,7 @@ export const paymentFormChecker = (formObj) => {
   
   // console.log(cardInformation)
   // console.log(paymentInformation)
-  console.log(licenseInfo.license);
+  // console.log(licenseInfo.license);
   
 
 let requiredFields = {
@@ -49,7 +49,7 @@ if(licenseInfo.license == 'personal'){
     requiredFields.cardInformation.cardNumber = true
     requiredFields.cardInformation.expirationDate = true 
     requiredFields.cardInformation.cvc = true 
-    console.log(requiredFields.cardInformation)
+    // console.log(requiredFields.cardInformation)
 } else {
   if(cardInformation.cardNumber == ""){
     requiredFields.cardInformation.cardNumber = false
@@ -78,7 +78,7 @@ if(licenseInfo.license == 'personal'){
 
 let msg = []
 for (const field in requiredFields.paymentInformation) {
-  console.log(requiredFields.paymentInformation[field])
+  // console.log(requiredFields.paymentInformation[field])
   if(requiredFields.paymentInformation[field] == false){
     activate = false
     field == "billingAddress" && msg.push("check you added a correct billing address")
@@ -87,7 +87,7 @@ for (const field in requiredFields.paymentInformation) {
   }
 }
 for (const field in requiredFields.cardInformation) {
-  console.log(requiredFields.cardInformation[field])
+  // console.log(requiredFields.cardInformation[field])
   if(requiredFields.cardInformation[field] == false){
     activate = false
     field == "cardNumber" && msg.push("check you added a correct card number")
