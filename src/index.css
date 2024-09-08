@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap');
 @font-face {
   font-family: "PP Rader";
-  src: url('./assets/fonts/rader_font/PPRader-Regular.otf') format('opentype');
+  src: './assets/fonts/rader_font/PPRader-Regular.otf' format('opentype');
 }
 /* reset CSS */
 *{
