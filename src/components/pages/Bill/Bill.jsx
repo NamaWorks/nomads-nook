@@ -26,7 +26,7 @@ const Bill = () => {
         titleBottom={titleBottom}
       />
 
-      <main>
+      <main id='bill-page'>
 
         <section id='bill-item'>
           <div className="logo-container">

@@ -1,4 +1,4 @@
-.logo-container {
+#bill-item .logo-container {
   width:100%;
   display: flex;
   align-items: center;
@@ -14,7 +14,8 @@
   width: 110px;
 }
 
-main {
+#bill-page {
+  height: 100svh;
   position: relative;
   background-color: var(--nn-cream-200);
   display: flex;
@@ -68,4 +69,10 @@ main {
   height: 100%;
   object-position: center;
   object-fit: cover;
+}
+
+@media screen and (max-width: 800px) {
+  #bill-page {
+    /* top: 65px; */
+  }
 }

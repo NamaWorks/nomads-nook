@@ -9,6 +9,7 @@
   width: 100%;
   padding: calc(2*var(--nn-padding-100));
   transition: var(--nn-animations-time-200) var(--nn-animations-smooth-enter);
+  z-index: 999;
 
   @starting-style {
     top:-500px

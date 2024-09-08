@@ -2,7 +2,7 @@
 
 .cart-page {
   padding: var(--nn-padding-100);
-  /* height: calc(950svh - 65px); */
+  /* height: calc(95svh - 65px); */
   display: flex;
   flex-direction: column;
   align-items:normal;
@@ -32,6 +32,7 @@ p.accent{
 
 .ticket-container {
   margin: 2rem 0;
+  /* overflow: visible; */
 }
 
 .date-order-container {
@@ -71,4 +72,12 @@ p.accent{
   flex-direction: column;
   justify-content: space-between;
   height: 50%;
+}
+
+@media screen and (max-width: 800px) {
+  .cart-page{
+    position: relative;
+    top:50px;
+    overflow: scroll;
+  }
 }

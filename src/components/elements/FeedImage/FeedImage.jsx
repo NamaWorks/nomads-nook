@@ -24,6 +24,14 @@ const FeedImage = ({ url, i }) => {
         }
       }}
       onMouseLeave={()=>{setImgHover(false)}}
+      onClick={(e)=>{
+        setImgHover(!imgHover)
+        const imageId = e.target.parentElement.querySelector("img").id
+        if(imagesAddedToCart.includes(imageId)){
+          console.log(imageId)
+          setAlreadyAdded(true)
+        }
+      }}
     >
       <img 
         src={url} 

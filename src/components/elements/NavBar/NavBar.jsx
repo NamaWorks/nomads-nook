@@ -1,12 +1,13 @@
 import { Link, NavLink } from 'react-router-dom'
 import './NavBar.css'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavScroll } from '../../../utils/hooks/useNavScroll'
 
 const NavBar = ({ titleSize, navPos, navGap, navHeight, navTop, titleBottom }) => {
 
 
   const topPos = titleBottom + "%"
+
 
   return (
     <>

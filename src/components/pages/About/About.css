@@ -6,7 +6,7 @@ nav{
   padding: var(--nn-padding-100);
 }
 
-main {
+.about-page {
   position: relative;
   top: 65px;
   height: calc(100svh - 100px);
@@ -95,4 +95,12 @@ main {
   align-self: center;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .about-page {
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: end;
+  }
 }

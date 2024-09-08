@@ -8,3 +8,16 @@
   gap: var(--nn-gap-000);
   padding: var(--nn-padding-000);
 }
+
+@media screen and (max-width: 800px) {
+  .images-feed {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-auto-rows: repeat(auto, 1fr); */
+    grid-auto-rows: minmax(100px, 20svh);
+    grid-auto-flow: row dense;
+    gap: var(--nn-gap-000);
+    padding: var(--nn-padding-000);
+  } 
+}

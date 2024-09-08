@@ -1,5 +1,6 @@
 .logo-container {
   display: flex;
+  justify-content: flex-start;
   position: relative;
   left: -0.5rem;
 }
@@ -48,4 +49,16 @@ nav ul li a {
 
 .active {
   color: var(--nn-accent-coral);
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    justify-content: space-between;
+  }
+  nav .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* width: 200px; */
+  }
 }
