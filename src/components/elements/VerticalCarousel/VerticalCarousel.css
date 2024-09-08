@@ -1,7 +1,7 @@
 .carousel-container{
   min-width: 30svw;
   width: 30svw;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .carousel-container-inner {

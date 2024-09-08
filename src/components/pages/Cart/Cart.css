@@ -6,6 +6,9 @@
   display: flex;
   flex-direction: column;
   align-items:normal;
+  position: relative;
+  top: 65px;
+  height: calc(100svh - 100px);
 }
 
 p.accent{

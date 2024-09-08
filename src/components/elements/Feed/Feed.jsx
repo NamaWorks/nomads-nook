@@ -3,6 +3,7 @@ import FeedImage from '../FeedImage/FeedImage';
 import './Feed.css'
 import  { useCallback, useEffect, useState } from 'react'
 import { fullWidth, lineOfFour, groupOfThree } from '../../../utils/functions/gridRandomizer.js'
+import { getRandomInt } from '../../../utils/functions/getRandomInt.js';
 
 const Feed = () => {
   const [imagesAddedToFeed, setImagesAddedToFeed] = useState(8)
@@ -14,16 +15,16 @@ const Feed = () => {
       setImagesAddedToFeed(imagesAddedToFeed+8)
     }
     console.log(imagesAddedToFeed)
-    fullWidth()
-    !(window.innerWidth<=800) && lineOfFour()
-    !(window.innerWidth<=800) && groupOfThree()
+    getRandomInt(0,10)<=1 && fullWidth()
+    getRandomInt(0,10)<=2 && !(window.innerWidth<=800) && lineOfFour()
+    getRandomInt(0,10)<=3 && !(window.innerWidth<=800) && groupOfThree()
   },[imagesAddedToFeed])
   
 useEffect(() => {
   window.addEventListener("scroll", addMoreImages)
-  fullWidth()
-  !(window.innerWidth<=800) && groupOfThree()
-  !(window.innerWidth<=800) && lineOfFour()
+  getRandomInt(0,10)<=1 && fullWidth()
+  getRandomInt(0,10)<=2 && !(window.innerWidth<=800) && groupOfThree()
+  getRandomInt(0,10)<=3 && !(window.innerWidth<=800) && lineOfFour()
 }, [addMoreImages])
 
 

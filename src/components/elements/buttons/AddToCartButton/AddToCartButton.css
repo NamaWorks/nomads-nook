@@ -1,4 +1,5 @@
 .add-to-cart-btn {
+  width: 80%;
   z-index: 99;
   position: absolute;
   bottom: 50%;
@@ -29,8 +30,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 15svw;
+  /* gap: 10svw; */
   pointer-events: none;
+  text-align: left;
 }
 
 .add-to-cart-btn p{

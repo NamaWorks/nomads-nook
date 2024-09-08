@@ -1,5 +1,8 @@
 .checkout-page {
   width: calc(100% - 2*(--nn-margin-main-100));
+  position: relative;
+  top:50px;
+  height: calc(100svh - 100px);
   /* padding: var(--nn-padding-100); */
   background-color: var(--nn-cream-300);
   margin: var(--nn-margin-main-100);
