@@ -19,7 +19,8 @@ export const FormContext = createContext();
 
 function App() {
 
-const [imagesAddedToCart, setImagesAddedToCart] = useState(["image-id-0", "image-id-13", "image-id-30"])
+// const [imagesAddedToCart, setImagesAddedToCart] = useState(["image-id-0", "image-id-13", "image-id-30"])
+const [imagesAddedToCart, setImagesAddedToCart] = useState([])
 const [licenseInfo, setLicenseInfo] = useState(licenseInitialState)
 const [orderNumber, setOrderNumber] = useState("00043490") 
 const [checkoutInformation, setCheckoutInformation] = useState({name:"", surname:"", email:"", conditions:false, newsletter:false})
