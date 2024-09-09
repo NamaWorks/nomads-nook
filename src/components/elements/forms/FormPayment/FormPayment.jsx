@@ -6,7 +6,7 @@ import FormInput from '../FormInput/FormInput.jsx'
 import CardInformation from './CardInformation/CardInformation.jsx'
 import './FormPayment.css'
 
-import React, { useContext } from 'react'
+import React, { useCallback, useContext, useEffect } from 'react'
 
 const FormPayment = ({popupTexts, setPopupTexts, setButtonHovered, buttonHovered}) => {
 const formsElements = useContext(FormContext)
@@ -15,10 +15,6 @@ const {licenseInfo} = formsElements
 const {paymentInformation} = formsElements
 const {setPaymentInformation} = formsElements
 const {cardInformation} = formsElements
-
-
-const test = useCardInfoFormatter()
-console.log(test)
 
 
   return (

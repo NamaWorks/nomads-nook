@@ -1,6 +1,6 @@
 export const paymentFormChecker = (formObj) => {
 
-  console.clear()
+  // console.clear()
 
   const {cardInformation}= formObj
   const {paymentInformation}= formObj

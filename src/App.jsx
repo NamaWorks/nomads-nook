@@ -24,8 +24,8 @@ const [imagesAddedToCart, setImagesAddedToCart] = useState([])
 const [licenseInfo, setLicenseInfo] = useState(licenseInitialState)
 const [orderNumber, setOrderNumber] = useState("00043490") 
 const [checkoutInformation, setCheckoutInformation] = useState({name:"", surname:"", email:"", conditions:false, newsletter:false})
-const [paymentInformation, setPaymentInformation] = useState({billingAddress:"", country:"", vatNumber:""})
-const [cardInformation, setCardInformation] = useState({cardNumber:0, expirationDate:"", cvc:0})
+const [paymentInformation, setPaymentInformation] = useState({billdingAddress:"", country:"", vatNumber:""})
+const [cardInformation, setCardInformation] = useState({cardNumber:1234123413241234, expirationDate:"", cvc:0})
 
 
   return (

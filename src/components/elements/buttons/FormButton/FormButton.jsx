@@ -15,7 +15,7 @@ const FormButton = ({checkerFnc, setPopupTexts, setButtonHovered, btnClass, link
       checkerFnc(toCheck).activate == false && setActive(false)
       checkerFnc(toCheck).activate == true && setActive(true)
 
-      console.log(checkerFnc(toCheck))
+      // console.log(checkerFnc(toCheck))
     }
     if(setPopupTexts){
       setPopupTexts(checkerFnc(toCheck).infoToDisplay)

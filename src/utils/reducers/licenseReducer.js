@@ -1,5 +1,6 @@
 export const licenseInitialState = {
-  license: "personal",
+  license: "commercial",
+  // license: "personal",
   pricePerImage: 0,
   showCardInfo: false,
 }
