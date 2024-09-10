@@ -14,7 +14,7 @@
 /* END reset CSS */
 :root {
   /* FONTS */
-  --nn-main-font-family: "PP Rader"; 
+  --nn-main-font-family: "PP Rader", monospace; 
   --nn-secondary-font-family: "Lekton", monospace; 
   --font-size-p-btn:12px;
   --font-size-p:1rem;

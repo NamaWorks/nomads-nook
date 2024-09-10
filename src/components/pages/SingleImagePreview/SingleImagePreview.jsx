@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import { getImageById } from "../../../utils/functions/getImageFromId";
 import NavBar from '../../elements/NavBar/NavBar';
 import { useNavScroll } from '../../../utils/hooks/useNavScroll';
+import FeedImage from '../../elements/FeedImage/FeedImage';
 
 
 const SingleImagePreview = () => {
@@ -23,9 +24,10 @@ const SingleImagePreview = () => {
       <div className="image-preview">
         <img src={imageObject.url} alt={imageObject.id} />
       </div>
+       
       </main>
     </>
   );
 }
 
-export default SingleImagePreview
+export default SingleImagePreview;

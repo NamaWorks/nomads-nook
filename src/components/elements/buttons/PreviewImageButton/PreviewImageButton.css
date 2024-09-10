@@ -1,0 +1,19 @@
+.preview-btn {
+  z-index: 99;
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  margin: var(--nn-margin-btn-100);
+  text-transform: uppercase;
+  background: none;
+  color: var(--nn-white);
+  cursor: pointer;
+  font-size: var(--font-size-p-btn);
+  transition: var(--nn-animations-time-100) var(--nn-animations-smooth-enter);
+
+  @starting-style {
+    opacity:50%;
+    scale:90%;
+  }
+}
+

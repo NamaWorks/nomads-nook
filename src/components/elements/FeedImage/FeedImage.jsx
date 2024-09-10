@@ -3,6 +3,7 @@ import './FeedImage.css'
 import RateButton from '../buttons/RateButton/RateButton'
 import AddToCartButton from './../buttons/AddToCartButton/AddToCartButton.jsx'
 import { FeedContext } from '../../../App.jsx'
+import PreviewImageButton from '../buttons/PreviewImageButton/PreviewImageButton.jsx'
 
 
 
@@ -41,6 +42,7 @@ const FeedImage = ({ url, i }) => {
       />
 
       {imgHover ? <RateButton shown={true} /> : <RateButton shown={false} />}
+      {imgHover ? <PreviewImageButton shown={true} imageId={`image-id-${i}`}/> : <PreviewImageButton shown={false} imageId={`image-id-${i}`} />}
       {imgHover &&  <AddToCartButton alreadyAdded={alreadyAdded} setAlreadyAdded={setAlreadyAdded}/>}
     </div>
   )

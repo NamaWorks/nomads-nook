@@ -26,7 +26,7 @@ const {imagesAddedToCart, setImagesAddedToCart} = useContext(FeedContext)
       <div className='btn-content'>
         <p>{alreadyAdded == true ? "already in your cart" : "add to cart"}</p>
         <div className='arrow'>
-          <img src="assets/svg/arrow.svg" alt="" />
+          <img src="/public/assets/svg/arrow.svg" alt="" />
         </div>
       </div>
     </button>
