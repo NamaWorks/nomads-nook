@@ -12,7 +12,7 @@ const CardInformation = ({hidden}) => {
   const {cardInformation} = formsElements
   const {setCardInformation} = formsElements
 
-  const [formattedInfo, setFormattedInfo] = useState({cardNumber:"1234 1234 1324 1324", expirationDate: "MM / YY", cvc: "cvc"})
+  const [formattedInfo, setFormattedInfo] = useState({cardNumber:"card number", expirationDate: "MM / YY", cvc: "cvc"})
 
     useEffect(()=>{
       setFormattedInfo(cardInformationFormatter(cardInformation))
@@ -24,13 +24,16 @@ const CardInformation = ({hidden}) => {
           
     <p className='card-info-text'>card information</p>
 
-      <FormInput id={"card-number"} type={"number"} placeholder={ formattedInfo.cardNumber || "1234 1234 1324 1234 1234"} disabled={hidden ? true : false} fieldToModify={"cardNumber"} infoToChange={cardInformation} setInfoToChange={setCardInformation}  />
+      <FormInput id={"card-number"} type={"number"} placeholder={"card number"} disabled={hidden ? true : false} fieldToModify={"cardNumber"} infoToChange={cardInformation} setInfoToChange={setCardInformation} max={2}/>
+      <p id='card-number-displayed' className='formatted-info' >{formattedInfo.cardNumber}</p>
 
     <div className='card-data-row'>
 
-      <FormInput id={"expiration-date"} type={"number"} placeholder={"mm / yy"} disabled={hidden ? true : false} fieldToModify={"expirationDate"} infoToChange={cardInformation} setInfoToChange={setCardInformation} />
+      <FormInput id={"expiration-date"} type={"number"} placeholder={"expiration date"} disabled={hidden ? true : false} fieldToModify={"expirationDate"} infoToChange={cardInformation} setInfoToChange={setCardInformation} />
+      <p id='expiration-date-displayed' className='formatted-info' >{formattedInfo.expirationDate}</p>
 
       <FormInput id={"cvc"} type={"number"} placeholder={"cvc"} disabled={hidden ? true : false} fieldToModify={"cvc"} infoToChange={cardInformation} setInfoToChange={setCardInformation} />
+      <p id='cvc-displayed' className='formatted-info' >{formattedInfo.cvc}</p>
 
     </div>
 

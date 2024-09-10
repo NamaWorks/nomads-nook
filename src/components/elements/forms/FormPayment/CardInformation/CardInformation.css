@@ -1,0 +1,26 @@
+.card-information input {
+  color: transparent;
+}
+
+.card-information #card-number-displayed{
+  font-family: var(--nn-secondary-font-family);
+  position: absolute;
+  bottom: 167px;
+  left: 1.5rem;
+}
+
+.card-information #expiration-date-displayed{
+  font-family: var(--nn-secondary-font-family);
+  position: absolute;
+  bottom: 117px;
+  left: 2rem;
+}
+
+.card-information #cvc-displayed{
+  font-family: var(--nn-secondary-font-family);
+  position: absolute;
+  bottom: 117px;
+  left: calc(50% + 1.5rem);
+}
+
+

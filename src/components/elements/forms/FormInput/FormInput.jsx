@@ -1,10 +1,12 @@
-const FormInput = ({id, type, placeholder, disabled=false, fieldToModify, infoToChange, setInfoToChange}) => {
+const FormInput = ({id, type, placeholder, disabled=false, fieldToModify, infoToChange, setInfoToChange, max}) => {
   return (
     <>
     <input id={id} 
       type={type} 
       placeholder={placeholder}  
       disabled={disabled}
+      min={0}
+      max={ max}
       onChange={(e)=>{
         // console.log(infoToChange)
         if(type == "checkbox"){
