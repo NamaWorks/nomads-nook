@@ -41,8 +41,8 @@ const FeedImage = ({ url, i }) => {
         }}
       />
 
-      {imgHover ? <RateButton shown={true} /> : <RateButton shown={false} />}
       {imgHover ? <PreviewImageButton shown={true} imageId={`image-id-${i}`}/> : <PreviewImageButton shown={false} imageId={`image-id-${i}`} />}
+      {imgHover ? <RateButton shown={true} /> : <RateButton shown={false} />}
       {imgHover &&  <AddToCartButton alreadyAdded={alreadyAdded} setAlreadyAdded={setAlreadyAdded}/>}
     </div>
   )
