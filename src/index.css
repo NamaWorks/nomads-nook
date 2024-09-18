@@ -2,7 +2,7 @@
 @font-face {
   font-family: "PP Rader";
   /* src: './public/assets/fonts/rader_font/PPRader-Regular.otf' format('opentype'); */
-  src: url('./public/assets/fonts/rader_font/PPRader-Regular.otf') format('opentype');
+  src: url('/assets/fonts/rader_font/PPRader-Regular.otf') format('opentype');
 }
 /* reset CSS */
 *{

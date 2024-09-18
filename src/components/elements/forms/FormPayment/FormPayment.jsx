@@ -1,6 +1,5 @@
 import { FormContext } from '../../../../App.jsx'
 import { paymentFormChecker } from '../../../../utils/functions/paymentFormChecker.js'
-import useCardInfoFormatter from '../../../../utils/hooks/useCardInfoFormatter.jsx'
 import FormButton from '../../buttons/FormButton/FormButton.jsx'
 import FormInput from '../FormInput/FormInput.jsx'
 import CardInformation from './CardInformation/CardInformation.jsx'

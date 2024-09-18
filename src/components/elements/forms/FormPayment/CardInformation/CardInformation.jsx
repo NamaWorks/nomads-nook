@@ -1,6 +1,5 @@
 import { FormContext } from '../../../../../App'
 import { cardInformationFormatter } from '../../../../../utils/functions/cardInformationFormatter'
-import useCardInfoFormatter from '../../../../../utils/hooks/useCardInfoFormatter'
 import FormInput from '../../FormInput/FormInput'
 import './CardInformation.css'
 import React, { useContext, useEffect, useState } from 'react'

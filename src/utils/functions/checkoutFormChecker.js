@@ -1,12 +1,10 @@
 export const checkoutFormChecker = (formObj) => {
   const { checkoutInformation } = formObj
-  const { licenseInfo } = formObj
 
   const { name } = checkoutInformation
   const { email } = checkoutInformation
   const { surname } = checkoutInformation
   const { conditions } = checkoutInformation
-  // const { newsletter } = checkoutInformation
 
 let requiredFields = {
   name: false,
@@ -33,8 +31,6 @@ if(email){
 if(conditions){
   requiredFields.conditions = true
 }
-
-// console.log(requiredFields)
 
 let msg = []
 for (const field in requiredFields) {
