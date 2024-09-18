@@ -15,7 +15,7 @@ const Feed = () => {
       setImagesAddedToFeed(imagesAddedToFeed+8)
     }
     console.log(imagesAddedToFeed)
-    getRandomInt(0,10)<=1 && fullWidth()
+    // getRandomInt(0,10)<=1 && fullWidth()
     getRandomInt(0,10)<=1 && !(window.innerWidth<=800) && lineOfFour()
     getRandomInt(0,10)<=1 && !(window.innerWidth<=800) && groupOfThree()
   },[imagesAddedToFeed])
