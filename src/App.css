@@ -1,13 +1,7 @@
 /* This is to change the cursor */
 
-#cursor{
+body, *, html{
   cursor: none;
-  pointer-events: none;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: var(--a37-var-color-red);
-  z-index: 10000;
-  border: 1px solid var(--a37-var-color-beige-0);
 }
+
 /* Cursor changed  */
