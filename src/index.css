@@ -77,7 +77,7 @@ h2{
 }
 
 a, button {
-cursor: none;
+cursor: none!important;
 }
 
 @media screen and (max-width: 800px) {
