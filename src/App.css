@@ -1,7 +1,13 @@
 /* This is to change the cursor */
 
-body, *, html{
+body, *{
   cursor: none;
+  /* pointer-events: none; */
 }
 
+#cursor{
+  cursor: none;
+  pointer-events: none;
+  z-index: 10000;
+}
 /* Cursor changed  */
