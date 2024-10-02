@@ -1,7 +1,7 @@
 const cursor = document.createElement("div")
 cursor.setAttribute("id", "cursor")
 cursor.innerHTML = `
-<img src="/public/assets/Polygon 1@2x.png">
+<img src="/assets/Polygon 1@2x.png">
 `
 
 
