@@ -76,6 +76,10 @@ h2{
   font-size: var(--font-size-h2);
 }
 
+a, button {
+cursor: none;
+}
+
 @media screen and (max-width: 800px) {
   main {
     overflow: scroll;
