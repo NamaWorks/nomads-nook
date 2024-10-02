@@ -10,10 +10,11 @@ import Checkout from './components/pages/Checkout/Checkout'
 import Payment from './components/pages/Payment/Payment'
 import { licenseInitialState } from './utils/reducers/licenseReducer'
 import SingleImagePreview from './components/pages/SingleImagePreview/SingleImagePreview'
+import { changeCursor } from './utils/functions/changeCursor'
 
 
 
-
+changeCursor()
 export const FeedContext = createContext()
 export const FormContext = createContext();
 
