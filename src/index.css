@@ -11,6 +11,17 @@
 	border: 0;
   box-sizing: border-box;
 }
+
+body, *{
+  cursor: none;
+  /* pointer-events: none; */
+}
+
+#cursor{
+  cursor: none;
+  pointer-events: none;
+  z-index: 10000;
+}
 /* END reset CSS */
 :root {
   /* FONTS */
